@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>AmpereWeb</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <main ng-controller="RegistroCadController as vm" role="main" class="card card-register mx-auto mt-5">
+      <div class="card-header">Registre uma Conta</div>
+      <div class="card-body">
+        <form>
+
+          <div class="form-group">
+            <label for="usuarioAcesso">Usuário de Acesso</label>
+            <input class="form-control"
+                   ng-model="vm.cadastro.nome"
+                   id="usuarioAcesso" 
+                   type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control"
+                   ng-model="vm.cadastro.email" 
+                   id="email" 
+                   type="text">
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="senha">Senha</label>
+                <input class="form-control"
+                       ng-model="vm.cadastro.senha" 
+                       id="senha" 
+                       type="password">
+              </div>
+              <div class="col-md-6">
+                <label for="confirmarSenha">Confirmar Senha</label>
+                <input class="form-control"
+                       ng-model="vm.cadastro.confirmarSenha"
+                       id="confirmarSenha" 
+                       type="password">
+              </div>
+            </div>
+          </div>
+          <a ng-click="vm.salvar()" 
+             class="btn btn-outline-success btn-block" >Registrar</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="login.html">Página de Login</a>
+          <a class="d-block small" href="recuperar-senha.html">Esqueceu a Senha?</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-locale_pt-br.js"></script>
+
+    <!-- Scripts da Aplicação -->
+  <script src="module.js"></script>
+  <script src="app/acesso/registro-cad.controller.js"></script>
+  <script src="app/acesso/registro.service.js"></script>
+</body>
+
+</html>

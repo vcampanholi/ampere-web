@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html ng-app="app">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>AmpereWeb</title>
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href="css/sb-admin.css" rel="stylesheet">
+   </head>
+   <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+         <a class="navbar-brand">AmpereWeb</a>
+         <button class="navbar-toggler navbar-toggler-right" 
+            type="button"
+            data-toggle="collapse" 
+            data-target="#navbarResponsive" 
+            aria-controls="navbarResponsive" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Aparelhos">
+                  <a class="nav-link" ui-sref="AparelhosList">
+                  <i class="fa fa-fw fa-dashboard"></i>
+                  <span class="nav-link-text">Aparelhos</span>
+                  </a>
+               </li>
+               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Condutores">
+                  <a class="nav-link" ui-sref="CondutorList">
+                  <i class="fa fa-fw fa-area-chart"></i>
+                  <span class="nav-link-text">Condutores</span>
+                  </a>
+               </li>
+               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cargas">
+                  <a class="nav-link" href="carga-list.html">
+                  <i class="fa fa-fw fa-table"></i>
+                  <span class="nav-link-text">Cargas</span>
+                  </a>
+               </li>
+               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cálculos">
+                  <a class="nav-link nav-link-collapse collapsed" 
+                     data-toggle="collapse" 
+                     href="#collapseCalculos" 
+                     data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-wrench"></i>
+                  <span class="nav-link-text">Cálculos</span>
+                  </a>
+                  <ul class="sidenav-second-level collapse" id="collapseCalculos">
+                     <li>
+                        <a href="conducaoCorrente-list.html">Condução de Corrente</a>
+                     </li>
+                     <li>
+                        <a href="dimensionamentoCondutor-list.html">Dimensionamento de Condutor</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+               <li class="nav-item">
+                  <a class="nav-link text-center" id="sidenavToggler">
+                  <i class="fa fa-fw fa-angle-left"></i>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" 
+                     href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <i class="fa fa-fw fa-envelope"></i>
+                     <span class="d-lg-none">Mensagens
+                        <!--<span class="badge badge-pill badge-primary">12 New</span>-->
+                     </span>
+                     <span class="indicator text-primary d-none d-lg-block">
+                     <i class="fa fa-fw fa-circle"></i>
+                     </span>          
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                     <h6 class="dropdown-header">Novas mensagens:</h6>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item small" href="#">Ver totas</a>
+                  </div>
+               </li>
+               <li class="nav-item">
+                  <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                     <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Buscar...">
+                        <span class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                        <i class="fa fa-search"></i>
+                        </button>
+                        </span>
+                     </div>
+                  </form>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                  <i class="fa fa-fw fa-sign-out"></i>Sair</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="content-wrapper">
+         <main role="main" class="col-md-12 ml-sm-auto col-lg-12">
+            <ui-view>
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item">
+                  <a>Tabela condução corrente</a>
+               </li>
+               <li class="breadcrumb-item active">Capacidade de Condução de corrente em amperes (A) para cabos de cobre com isolação em PVC (70º C)</li>
+            </ol>
+            <table class="table">
+               <thead class="thead-light">
+                  <tr>
+                     <th class="text-center" scope="col">mm²</th>
+                     <th class="text-center" scope="col">2 condutores carregados</th>
+                     <th class="text-center" scope="col">3 condutores carregados</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th class="text-center" scope="row">0,5</th>
+                     <td class="text-center">10A</td>
+                     <td class="text-center">9A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">0,75</th>
+                     <td class="text-center">12A</td>
+                     <td class="text-center">11A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">1</th>
+                     <td class="text-center">15A</td>
+                     <td class="text-center">13A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">1,5</th>
+                     <td class="text-center">19A</td>
+                     <td class="text-center">17A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">2,5</th>
+                     <td class="text-center">26A</td>
+                     <td class="text-center">13A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">4</th>
+                     <td class="text-center">35A</td>
+                     <td class="text-center">31A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">6</th>
+                     <td class="text-center">45A</td>
+                     <td class="text-center">40A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">10</th>
+                     <td class="text-center">61A</td>
+                     <td class="text-center">54A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">16</th>
+                     <td class="text-center">81A</td>
+                     <td class="text-center">73A</td>
+                  </tr>
+                  <tr>
+                     <th class="text-center" scope="row">25</th>
+                     <td class="text-center">106A</td>
+                     <td class="text-center">95A</td>
+                  </tr>
+               </tbody>
+            </table>
+            <ui-view>
+         </main>
+         <footer class="sticky-footer">
+            <div class="container">
+               <div class="text-center">
+                  <small>Copyright © AmpereWeb 2018</small>
+               </div>
+            </div>
+         </footer>
+         <!-- Scroll to Top Button-->
+         <a class="scroll-to-top rounded" href="#page-top">
+         <i class="fa fa-angle-up"></i>
+         </a>
+         <!-- Logout Modal-->
+         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">Deseja Sair?</h5>
+                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">×</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">Selecione "Sair" para encerrar a sessão.</div>
+                  <div class="modal-footer">
+                     <button class="btn btn-outline-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                     <a class="btn btn-outline-danger" ui-sref="Login">Sair</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Bootstrap core JavaScript-->
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+         <script>window.jQuery || document.write('<script src="vendor/jquery-slim.min.js"><\/script>')</script>
+         <script src="vendor/jquery/jquery.min.js"></script>
+         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+         <script src="js/sb-admin.min.js"></script>
+         <script src="js/angular.js"></script>
+         <script src="js/angular-locale_pt-br.js"></script>
+         <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+         <!-- Scripts da Aplicação -->
+         <script src="app/module.js"></script>
+
+         <script src="app/acesso/login.controller.js"></script>
+
+         <script src="app/aparelhos/aparelhos-cad/aparelho-cad.controller.js"></script>
+         <script src="app/aparelhos/aparelhos-list/aparelho-list.controller.js"></script>
+
+         <script src="app/condutores/condutores-cad/condutor-cad.controller.js"></script>
+         <script src="app/condutores/condutores-list/condutor-list.controller.js"></script>
+
+         <script src="app/aparelhos/aparelho.service.js"></script>
+         <script src="app/condutores/condutor.service.js"></script>
+
+      </div>
+   </body>
+=======
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.6.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.6.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/downloaded-122x69.jpg" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="menu cid-qMpD7mtgbr" once="menu" id="menu1-e">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    
+                         <img src="assets/images/downloaded-122x69.jpg" alt="Mobirise" title="" style="height: 3.8rem;">
+                    
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://mobirise.com">AmpereWeb</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-white display-7" href="https://play.google.com/store"><span class="mbri-mobile mbr-iconfont mbr-iconfont-btn">Mobile</span>
+                        </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link link text-white dropdown-toggle display-7" href="https://mobirise.com" data-toggle="dropdown-submenu" aria-expanded="false">
+                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>Sobre &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a><div class="dropdown-menu"><a class="text-white dropdown-item display-7" href="https://mobirise.com">New Item</a></div>
+                </li></ul>
+            
+        </div>
+    </nav>
+</section>
+
+<section class="engine"><a href="https://mobirise.ws/g">create your own website</a></section><section class="header12 cid-qMpHkCeCkT mbr-fullscreen mbr-parallax-background" id="header12-k">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0; background-color: rgb(255, 255, 255);">
+    </div>
+
+    <div class="container  ">
+            <div class="media-container">
+                <div class="col-md-12 align-center">
+                    <h1 class="mbr-section-title pb-3 mbr-white mbr-bold mbr-fonts-style display-1">AmpereWeb</h1>
+                    <p class="mbr-text pb-3 mbr-white mbr-fonts-style display-5">
+                        Economize tempo para novos projetos e deixe que o AmpereWeb realize seus cálculos e dimensionamentos</p>
+                    
+
+                    <div class="icons-media-container mbr-white">
+                        <div class="card col-12 col-md-6 col-lg-4">
+                            <div class="icon-block">
+                            
+                                <span class="mbr-iconfont mbri-speed"></span>
+                            
+                            </div>
+                            <h5 class="mbr-fonts-style display-5">
+                                Dimensionamento de condutores</h5>
+                        </div>
+
+                        <div class="card col-12 col-md-6 col-lg-4">
+                            <div class="icon-block">
+                                
+                                    <span class="mbr-iconfont mbri-growing-chart"></span>
+                                
+                            </div>
+                            <h5 class="mbr-fonts-style display-5">
+                                Cálculos de corrente e tensão</h5>
+                        </div>
+
+                        <div class="card col-12 col-md-6 col-lg-4">
+                            <div class="icon-block">
+                                <a href="https://mobirise.com/">
+                                    <span class="mbri-cash mbr-iconfont"></span>
+                                </a>
+                            </div>
+                            <h5 class="mbr-fonts-style display-5">
+                                Orçamentos elétricos<br></h5>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+</body>
+>>>>>>> cbaa76bc79c17be56987a753058da61eebd31def
+</html>

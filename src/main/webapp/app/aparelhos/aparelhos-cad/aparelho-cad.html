@@ -1,0 +1,44 @@
+<html ng-app="app">
+  <div class="container">
+    <div class="row">
+      <main role="main" class="col-md-10 ml-sm-auto col-lg-12">
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">                
+          <a href="javascript:window.history.go(-1)" 
+            class="fa fa-arrow-left pt-1 pb-1 mb-2" 
+            style="font-size:30px;color:gray">
+          </a>          
+          <h3 class="breadcrumb-item active">&ensp;Novo Aparelho</h3>
+        </div>
+        <form class="col-md-12">
+            <div class="form-group">
+              <label for="nome">Descrição</label>
+              <input ng-model="vm.cadastro.descricao" 
+                      type="text" 
+                      class="form-control" 
+                      id="descricao">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="potencia">Potência</label>
+                <input ng-model="vm.cadastro.potencia" 
+                        type="number" 
+                        class="form-control" 
+                        id="potencia">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="tensao">Tensão</label>
+                <input ng-model="vm.cadastro.tensao" 
+                        type="number" 
+                        class="form-control" 
+                        id="tensao">
+              </div>
+            </div>
+            <div class="form-row justify-content-end">
+              <button ng-click="vm.salvar()" type="button" class="btn btn-outline-success mr-2">Salvar</button>
+              <a ui-sref="AparelhosList" class="btn btn-outline-danger">Cancelar</a>
+            </div>
+          </form>
+      </main>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,36 @@
+
+<<<<<<< HEAD
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(£þçÜøÿÿÿÿ
+Isquid:EmptyStatementUsageCheck"Remove this empty statement.(ß¯þüÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(µðÄëþÿÿÿÿ
+Dsquid:EmptyStatementUsageCheck"Remove this empty statement.(½ŠŸ°
+Lsquid:S1135"2Complete the task associated to this TODO comment.(µðÄëþÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ªææ
+Dsquid:EmptyStatementUsageCheck"Remove this empty statement.(ü±š¦
+Lsquid:S1135"2Complete the task associated to this TODO comment.(Ú‚Èûÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¹þ²¯
+Lsquid:S1135"2Complete the task associated to this TODO comment.(íÜÑªøÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ô»ð™
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ñå›A
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÁÓÄÒøÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(µðÄëþÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ôßÁ¿þÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ô»ð™
+=======
+Dsquid:EmptyStatementUsageCheck"Remove this empty statement.(ü±š¦
+Dsquid:EmptyStatementUsageCheck"Remove this empty statement.(½ŠŸ°
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ô»ð™
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(£þçÜøÿÿÿÿ
+[squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ñå›A
+Isquid:EmptyStatementUsageCheck"Remove this empty statement.(ß¯þüÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÁÓÄÒøÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(µðÄëþÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(µðÄëþÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ªææ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ô»ð™
+Lsquid:S1135"2Complete the task associated to this TODO comment.(íÜÑªøÿÿÿÿ
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ôßÁ¿þÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(Ú‚Èûÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(µðÄëþÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¹þ²¯
+>>>>>>> cbaa76bc79c17be56987a753058da61eebd31def
