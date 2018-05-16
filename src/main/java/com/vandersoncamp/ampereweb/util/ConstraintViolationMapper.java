@@ -17,14 +17,11 @@ public class ConstraintViolationMapper implements ExceptionMapper<ConstraintViol
         Map<String, List<String>> erros = new HashMap<>();
 
         for (ConstraintViolation<?> v : e.getConstraintViolations()) {
-            String value = Optional.ofNullable(v.getInvalidValue())
-                    .orElse("NULL").toString();
+            String value = Optional.ofNullable(v.getInvalidValue()).orElse("NULL").toString();
             erros.put(printPropertyPath(v.getPropertyPath()), Arrays.asList(value, v.getMessage()));
         }
 
-        return Response.status(Response.Status.BAD_REQUEST)
-                .entity(erros)
-                .build();
+        return Response.status(Response.Status.BAD_REQUEST).entity(erros).build();
     }
 
     private String printPropertyPath(Path path) {
@@ -48,7 +45,6 @@ public class ConstraintViolationMapper implements ExceptionMapper<ConstraintViol
         }
 
         if (propertyPath.isEmpty() && parameterNode != null) {
-            // No property path constructed, assume this is a validation failure on a request parameter.
             propertyPath = parameterNode.toString();
         }
         return propertyPath;
