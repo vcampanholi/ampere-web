@@ -1,5 +1,7 @@
 package com.vandersoncamp.ampereweb.util;
 
-public interface EntityID {
+import java.io.Serializable;
+
+public interface EntityID extends Serializable {
     Long getId();
 }
