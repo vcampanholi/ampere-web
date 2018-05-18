@@ -1,4 +1,4 @@
-package com.vandersoncamp.ampereweb.util;
+package com.vandersoncamp.ampereweb.rest;
 
 import javax.persistence.EntityNotFoundException;
 import javax.ws.rs.core.Response;

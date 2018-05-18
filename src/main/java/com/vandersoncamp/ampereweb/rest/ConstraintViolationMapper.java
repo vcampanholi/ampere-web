@@ -1,4 +1,4 @@
-package com.vandersoncamp.ampereweb.util;
+package com.vandersoncamp.ampereweb.rest;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;

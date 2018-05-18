@@ -25,3 +25,17 @@ v
 Fsrc/main/java/com/vandersoncamp/ampereweb/service/AparelhoService.java,d/a/da33fcd2a6ec5353fe4b80aca0a86583fbb32501
 L
 src/main/webapp/package.json,0/d/0d44637b8f7bdb816935f1af20dc82577df7d597
+u
+Esrc/main/java/com/vandersoncamp/ampereweb/model/ConducaoCorrente.java,a/1/a1d1404fe332c704dba904edb0227bbbc8da9d64
+t
+Dsrc/main/java/com/vandersoncamp/ampereweb/model/CalculoCorrente.java,5/b/5b5258f1a663d62661f233771cc8156d06a29360
+}
+Msrc/main/java/com/vandersoncamp/ampereweb/service/CalculoCorrenteService.java,4/6/46494bb913e9e73bda697afa8bbe69896e27a802
+u
+Esrc/main/java/com/vandersoncamp/ampereweb/resource/CargaResource.java,5/2/528f2becefc605b7ad19a706295837ff178a5368
+€
+Psrc/main/java/com/vandersoncamp/ampereweb/resource/ConducaoCorrenteResource.java,2/2/22b075378d83c398d064010f3a796c362ae7f9e5
+x
+Hsrc/main/java/com/vandersoncamp/ampereweb/resource/CondutorResource.java,3/f/3f7a60922d27b79fee8618554b3486a08c5d2f92
+
+Osrc/main/java/com/vandersoncamp/ampereweb/resource/CalculoCorrenteResource.java,9/c/9cdf33d9794cbee9551de3e09a567877f653a26b
