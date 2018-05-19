@@ -1,16 +1,29 @@
-package com.vandersoncamp.ampereweb.service;
+package com.vandersoncamp.ampereweb.util;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
-import javax.persistence.criteria.*;
-import javax.persistence.metamodel.ListAttribute;
-import java.util.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaDelete;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.From;
+import javax.persistence.criteria.Order;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 
 /**
  * Classe utilitária para facilitação das chamadas mais simples à JPA utilizando CriteriaBuilder.
  * @author mauricio.guzinski e pietro.biasuz
- *
+ * @param <T> entidade utilizada na consulta
  */
-public class JpaCriteriaHelper<T> {
+public class JpaCriteriaHelper<T extends EntityID> {
 
     public enum ComparatorOperator { EQUAL, NOT_EQUAL, LIKE, LIKE_IGNORE_CASE, BETWEEN, GREATER_THAN, LESS_THAN, IN };
     public enum LogicalOperator { AND, OR };
@@ -18,29 +31,29 @@ public class JpaCriteriaHelper<T> {
 
     private static final Integer DEFAULT_PAGE_SIZE = 50;
 
-    private EntityManager em;
+    private final EntityManager em;
 
-    private CriteriaBuilder criteriaBuilder;
+    private final CriteriaBuilder criteriaBuilder;
 
-    private List<WhereEntry> wheres = new ArrayList<>();
+    private final List<WhereEntry> wheres = new ArrayList<>();
 
-    private List<OrderEntry> orders = new ArrayList<>();
+    private final List<OrderEntry> orders = new ArrayList<>();
 
     private Integer pageSize = DEFAULT_PAGE_SIZE;
 
     private Integer pageNumber;
 
-    private Class<T> entityClass;
+    private final Class<T> entityClass;
 
-    private List<String> directFetches;
+    private final List<String> directFetches;
 
-    private List<ListFetch<?>> listFetches;
-    
-    private Map<Path<?>, From<?, ?>> joinsMap = new HashMap<>();
+    private final List<ListFetch<?>> listFetches;
+
+    private final Map<Path<?>, From<?, ?>> joinsMap = new HashMap<>();
 
     private class ListFetch<E> {
-        private String attribute;
-        private Class<E> clazz;
+        private final String attribute;
+        private final Class<E> clazz;
 
         public ListFetch(String attribute, Class<E> clazz) {
             this.attribute = attribute;
@@ -54,15 +67,15 @@ public class JpaCriteriaHelper<T> {
      */
     private class WhereEntry {
 
-        private List<String> fieldNames;
+        private final List<String> fieldNames;
 
-        private ComparatorOperator comparatorOperator;
+        private final ComparatorOperator comparatorOperator;
 
-        private Object valueIni;
+        private final Object valueIni;
 
-        private Object valueEnd;
+        private final Object valueEnd;
 
-        private LogicalOperator logicalOperator;
+        private final LogicalOperator logicalOperator;
 
         public WhereEntry(List<String> fieldNames
                 ,ComparatorOperator comparatorOperator
@@ -83,7 +96,7 @@ public class JpaCriteriaHelper<T> {
      */
     private class OrderEntry {
 
-        private List<String> fieldNames;
+        private final List<String> fieldNames;
 
         private OrderDirection order;
 
@@ -93,7 +106,7 @@ public class JpaCriteriaHelper<T> {
         }
     }
 
-    private JpaCriteriaHelper(EntityManager em, Class<T> entityClass ) {
+    private JpaCriteriaHelper( EntityManager em, Class<T> entityClass ) {
         this.em               = em;
         this.entityClass      = entityClass;
         this.criteriaBuilder  = em.getCriteriaBuilder();
@@ -103,11 +116,12 @@ public class JpaCriteriaHelper<T> {
 
     /**
      * Cria o objeto de consulta para executar a query
+     * @param <X> entidade utilizada na consulta
      * @param em EntityManager
      * @param entityClazz Classe de destino
      * @return objeto de consulta
      */
-    public static <X> JpaCriteriaHelper<X> select( EntityManager em, Class<X> entityClazz ) {
+    public static <X extends EntityID> JpaCriteriaHelper<X> select( EntityManager em, Class<X> entityClazz ) {
         return new JpaCriteriaHelper<>( em, entityClazz );
     }
 
@@ -175,7 +189,7 @@ public class JpaCriteriaHelper<T> {
         addTowhere(Arrays.asList(fieldName), ComparatorOperator.EQUAL, value, null, LogicalOperator.AND);
         return this;
     }
-    
+
     public JpaCriteriaHelper<T> and( List<String> fieldNames, Object value ) {
         addTowhere(fieldNames, ComparatorOperator.EQUAL, value, null, LogicalOperator.AND);
         return this;
@@ -198,7 +212,7 @@ public class JpaCriteriaHelper<T> {
     /**
      * Inclui uma clausulaWHERE após um operador AND
      * @param fieldName Nome da propriedade
-     * @param comparator Comparador <b>(Para {@link ComparatorOperator.GREATER_THAN} e {@link ComparatorOperator.GREATER_THAN}
+     * @param comparator Comparador <b>(Para {@l1ink ComparatorOperator.GREATER_THAN} e {@link ComparatorOperator.GREATER_THAN}
      * é necessário que valor complemente {@link Comparable})</b>
      * @param value Valor
      * @return objeto de consulta
@@ -302,19 +316,19 @@ public class JpaCriteriaHelper<T> {
         // ORDER BY
         if ( ! orders.isEmpty() ) {
             ArrayList<Order> jpaOrders = new ArrayList<>();
-            for (OrderEntry orderField : orders) {
+            orders.forEach((orderField) -> {
                 if ( orderField.order.equals(OrderDirection.ASC) ) {
                     jpaOrders.add( criteriaBuilder.asc(getPath(orderField.fieldNames, root)));
                 } else {
                     jpaOrders.add( criteriaBuilder.desc(getPath(orderField.fieldNames, root)));
                 }
-            }
+            });
             criteriaQuery.orderBy( jpaOrders );
         }
 
         if ( pageNumber != null ) {
             return em.createQuery(criteriaQuery).setFirstResult( (pageNumber - 1) * pageSize ).setMaxResults(pageSize)
-                            .getResultList();
+                    .getResultList();
         } else {
             return em.createQuery(criteriaQuery).getResultList();
         }
@@ -348,16 +362,15 @@ public class JpaCriteriaHelper<T> {
     }
 
     private void listFetch(Root<T> root) {
-        for (JpaCriteriaHelper<T>.ListFetch<?> listFetch : listFetches) {
-            ListAttribute<? super T, ?> listAttribute = root.getModel().getList(listFetch.attribute, listFetch.clazz);
+        listFetches.stream().map((listFetch) -> root.getModel().getList(listFetch.attribute, listFetch.clazz)).forEachOrdered((listAttribute) -> {
             root.fetch(listAttribute);
-        }
+        });
     }
 
     private void directFetch(Root<T> root) {
-        for (String fetch : directFetches) {
+        directFetches.forEach((fetch) -> {
             root.fetch(fetch);
-        }
+        });
     }
 
     /**
@@ -544,8 +557,8 @@ public class JpaCriteriaHelper<T> {
 
     // TODO: testar se estah fazendo JOIN corretamente para multiplos niveis
     private Path<?> getPath(List<String> fieldNames, Root<T> root) {
-        Path<?> entity = root;
-        
+        javax.persistence.criteria.Path<?> entity = root;
+
         for (String fieldName : fieldNames) {
             Path<Object> fieldAsPath = entity.get(fieldName);
             if ( Collection.class.isAssignableFrom( fieldAsPath.getJavaType() ) ) {
@@ -573,7 +586,7 @@ public class JpaCriteriaHelper<T> {
         return this;
     }
 
-    public static <T> JpaCriteriaHelper<T> create(EntityManager em, Class<T> entityClazz) {
+    public static <T extends EntityID> JpaCriteriaHelper<T> create(EntityManager em, Class<T> entityClazz) {
         return new JpaCriteriaHelper<>( em, entityClazz );
     }
 
