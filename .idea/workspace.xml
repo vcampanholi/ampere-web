@@ -2,37 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0056964-21da-4ad5-af60-dfc109c11ca2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/AbstractCrudResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/JacksonConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/AbstractCrudService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/GenericDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22b075378d83c398d064010f3a796c362ae7f9e5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/274547431d99498e7b8c28aa7ca41d1c14423cf1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f7a60922d27b79fee8618554b3486a08c5d2f92" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/420d669fbe5d83b0bd1603a9b686bb59ad4ad863" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/528f2becefc605b7ad19a706295837ff178a5368" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9cdf33d9794cbee9551de3e09a567877f653a26b" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b63fbf5e805c2a0d0ff1442632fc50f81c27f122" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c27c0ffcdc58aa813194d254f1e373b9d1561c83" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/GenericService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/PersistenceManager.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/JaxRsActivator.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/ApiResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/JpaCriteriaHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/JpaCriteriaHelper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13cb262982d62070721900f4085be79db9861e9b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf59b543161cb492c73c3f3f3ea0dd38e8aaca0a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df3379b25887d245044e6e323860b4836115621f" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a7bd6fba1a061667be76d5e8a143320a72de239" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a7bd6fba1a061667be76d5e8a143320a72de239" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ampereweb.iml" afterPath="$PROJECT_DIR$/ampereweb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/AparelhoResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/AparelhoResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CargaResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CargaResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/ConducaoCorrenteResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/ConducaoCorrenteResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CondutorResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CondutorResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/AparelhoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/AparelhoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/CalculoCorrenteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/CalculoCorrenteService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/CargaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/CargaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/ConducaoCorrenteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/ConducaoCorrenteService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/CondutorService.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/CondutorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java" afterPath="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,42 +20,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ApiResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/ApiResource.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GenericDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/GenericDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="1344">
+              <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AparelhoResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/AparelhoResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalculoCorrenteResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java">
+      <file leaf-file-name="Producers.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JpaCriteriaHelper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/JpaCriteriaHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="358" column="35" lean-forward="true" selection-start-line="358" selection-start-column="35" selection-end-line="358" selection-end-column="35" />
+              <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -126,7 +83,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/EntityID.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/GenericService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/JacksonConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/AbstractCrudService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/AbstractCrudResource.java" />
@@ -137,12 +93,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/AparelhoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/JpaCriteriaHelper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CargaResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/ConducaoCorrenteResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CondutorResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/ApiResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/AparelhoResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java" />
       </list>
     </option>
   </component>
@@ -183,9 +140,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,7 +227,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -452,14 +409,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2939481" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2939481" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31330472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31759655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17867436" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -470,6 +426,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -488,6 +445,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/ApiResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/AparelhoResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/JpaCriteriaHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5728">
+          <caret line="358" column="35" lean-forward="true" selection-start-line="358" selection-start-column="35" selection-end-line="358" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/model/ConducaoCorrente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -607,14 +596,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/GenericService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/service/GenericService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/JacksonConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -715,26 +697,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/PersistenceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/PersistenceManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CargaResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -771,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,18 +748,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/GenericDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/JpaCriteriaHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="-165">
+          <caret line="358" column="35" lean-forward="false" selection-start-line="358" selection-start-column="35" selection-end-line="358" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/ApiResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="320">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -807,18 +772,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/resource/CalculoCorrenteResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/rest/ApiResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="128">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/JpaCriteriaHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/GenericDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="358" column="35" lean-forward="true" selection-start-line="358" selection-start-column="35" selection-end-line="358" selection-end-column="35" />
+        <state relative-caret-position="1344">
+          <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vandersoncamp/ampereweb/util/Producers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding />
         </state>
       </provider>
