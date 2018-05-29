@@ -17,7 +17,7 @@
         <version.postgresql>42.2.2</version.postgresql>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-        <sonar.language>java</sonar.language>
+        
     </properties>
 
     <dependencyManagement>
@@ -48,6 +48,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -94,6 +96,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+
 
 
         </plugins>
