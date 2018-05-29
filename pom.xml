@@ -15,7 +15,6 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.postgresql>42.2.2</version.postgresql>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jacoco.version>0.7.1.201405082137</jacoco.version>
         <sonar.language>java</sonar.language>
@@ -78,7 +77,7 @@
                 </dependencies>
             </plugin>
 
-
+            <!--Jacoco Report -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -104,10 +103,7 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <!-- Sets the path to the file which contains the execution data. -->
-
                             <dataFile>target/jacoco.exec</dataFile>
-                            <!-- Sets the output directory for the code coverage report. -->
                             <outputDirectory>target/jacoco-ut</outputDirectory>
                         </configuration>
                     </execution>
@@ -180,8 +176,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-
-
 
 </project>
