@@ -1,34 +1,57 @@
-(function(){
+(function () {
   'use strict'
 
   angular.module('app')
     .controller('AparelhoListController', AparelhoListController);
-  
-    AparelhoListController.$inject = ['AparelhoService'];
-  
-  function AparelhoListController(AparelhoService) {
-  
-      var vm = this;
-      vm.lista = [];
-      vm.remove = remove;
-  
-      function inicializa() {
-        AparelhoService.findAll()
-          .then(function (data) {
-            vm.lista = data;
-          });
-      }
 
-      function remove(id) {
-        if (confirm('Deseja realmente excluir o aparelho?')) {
-          AparelhoService.remove(id)
-          .then(function() {
-            alert('Aparelho excluído com sucesso!!!');
-            inicializa();
-          });
-        }
-      }
+  AparelhoListController.$inject = ['AparelhoService', 'DialogBuilder'];
+
+  function AparelhoListController(AparelhoService, DialogBuilder) {
+
+    var vm = this;
+    vm.lista = {};
+    vm.filtro = '';
+    vm.page = {
+      number: 1,
+      size: '15'
+    }
+
+    vm.atualizar = inicializa;
+    vm.resetFiltro = function () {
+      vm.filtro = '';
       inicializa();
+    }
+
+    vm.goToPage = function (page) {
+      vm.page.number = page;
+      inicializa();
+    }
+
+    function inicializa() {
+      AparelhoService.findAll(vm.filtro, vm.page)
+        .then(function (data) {
+          vm.lista = data;
+        });
+    }
+
+    vm.excluir = function (item) {
+      DialogBuilder.confirm('Tem certeza que deseja remover o registro?')
+        .then(function (result) {
+          if (result.value) {
+            AparelhoService.remove(item.id)
+              .then(function () {
+                load();
+                DialogBuilder.message('Registro excluído com sucesso!');
+              });
+          } else {
+            DialogBuilder.message({
+              title: 'Exclusão cancelada pelo usuário!',
+              type: 'error'
+            });
+          }
+        });
+    };
+    inicializa();
   }
 
 })();

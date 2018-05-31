@@ -5,6 +5,18 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">
                <h3 class="breadcrumb-item active">Listagem de Aparelhos</h3>
                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="input-group">
+                        <input type="text" ng-model="vm.filtro" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="btnGroupAddon">
+                        <div class="input-group-append">
+                            <!--
+                            <button type="button" ng-click="vm.resetFiltro()" class="btn btn-sm btn-secondary">
+                                <span class="feather icon-x"></span>
+                            </button>-->
+                            <button class="btn btn-primary" type="button" ng-click="vm.atualizar()">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
                   <a ui-sref="AparelhosNovo" class="btn btn-outline-primary">
                   <span data-feather="plus-circle"></span> Adicionar
                   </a>
@@ -22,12 +34,19 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <tr ng-repeat="aparelho in vm.lista">
+                     <tr ng-repeat="aparelho in vm.lista.registros">
                         <td class="text-right">{{$index +1}}</td>
                         <td>{{aparelho.descricao}}</td>
                         <td class="text-center">{{aparelho.potencia}}</td>
                         <td class="text-center">{{aparelho.tensao}}</td>
                         <td>
+                            <a ui-sref="AparelhosEditar({id: item.id})" class="btn btn-sm btn-link py-0">
+                                <span class="feather icon-edit"></span>
+                            </a>
+                            <button ng-click="vm.excluir(item)" class="btn btn-sm btn-link text-danger py-0">
+                                <span class="feather icon-trash-2"></span>
+                            </button>
+                            <!--
                            <a ng-click="vm.remove(aparelho.id)" 
                               href="" 
                               style="font-size:17px;color:black">
@@ -36,12 +55,48 @@
                            <a ng-click="vm.editar(aparelho.id)" 
                               href="" 
                               style="font-size:17px;color:black">
-                           <i class="fa fa-pencil" aria-hidden="false"></i>
+                           <i class="fa fa-pencil" aria-hidden="false"></i> -->
                            </a>
                         </td>
                      </tr>
                   </tbody>
                </table>
+               <nav class="navbar">
+                    <ul class="navbar-nav col-sm-2">
+                        <li class="nav-item">
+                            <div class="form-group row mb-0">
+                                <label class="col-sm-7 col-form-label px-0">Itens por página:</label>
+                                <div class="col-sm-5">
+                                    <select ng-model="vm.page.size" ng-change="vm.atualizar()" class="form-control p-0">
+                                        <option value="15">15</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            Registros {{vm.lista.currentPage * vm.lista.pageSize - vm.lista.pageSize + 1}} a {{vm.lista.currentPage * vm.lista.pageSize > vm.lista.total ? vm.lista.total : vm.lista.currentPage * vm.lista.pageSize}} de um total de {{vm.lista.total}}.
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <nav>
+                            <ul class="pagination justify-content-end mb-0">
+                                <li class="page-item" ng-class="{'disabled': vm.lista.currentPage == 1}">
+                                    <button ng-click="vm.goToPage(vm.page.number-1)" type="button" class="page-link" tabindex="-1">Anterior</button>
+                                </li>
+                                <li ng-repeat="item in vm.lista.pages" class="page-item" ng-class="{'disabled': vm.lista.currentPage == item}">
+                                    <button ng-click="vm.goToPage(item)" type="button" class="page-link" tabindex="-1">{{item}}</button>
+                                </li>
+                                <li class="page-item" ng-class="{'disabled': vm.lista.total <= vm.lista.currentPage * vm.lista.pageSize}">
+                                    <button ng-click="vm.goToPage(vm.page.number+1)" type="button" class="page-link" tabindex="-1">Próxima</button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </form>
+                </nav>
             </div>
          </main>
       </div>

@@ -1,25 +1,47 @@
-(function(){
+(function () {
   'use strict'
 
   angular.module('app')
     .controller('AparelhoCadController', AparelhoCadController);
 
-    AparelhoCadController.$inject = ['AparelhoService'];
+  AparelhoCadController.$inject = ['AparelhoService', '$state', '$stateParams', 'DialogBuilder'];
 
-  function AparelhoCadController(AparelhoService) {
+  function AparelhoCadController(AparelhoService, $state, $stateParams, DialogBuilder) {
+
     var vm = this;
+    vm.cadastro = {};
+    vm.error = {};
 
-    vm.cadastro = {}
-    vm.salvar = salvar; 
+    vm.salvar = salvar;
 
-    function salvar() {
-        AparelhoService.insert(vm.cadastro)
-          .then(function (data) {
-              alert('Aparelho ' + data.descricao + ' inserido com sucesso!!!');
-              vm.cadastro = {};
-          });
+    if ($stateParams.id) {
+      AparelhoService.findById($stateParams.id)
+        .then(function (data) {
+          vm.cadastro = data;
+        });
     }
 
+    function salvar() {
+      if (!vm.cadastro.id) {
+        AparelhoService.insert(vm.cadastro)
+          .then(function (dado) {
+            DialogBuilder.message('Aparelho inserido com sucesso!');
+            $state.go("AparelhosList");
+          })
+          .catch(function (error) {
+            vm.error = error.data;
+          });
+      } else {
+        AparelhoService.update(vm.cadastro)
+          .then(function (dado) {
+            DialogBuilder.message('Aparelho alterado com sucesso!');
+            $state.go("AparelhosList");
+          })
+          .catch(function (error) {
+            vm.error = error.data;
+          });
+      }
+    }
   }
 
 })();

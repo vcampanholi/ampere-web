@@ -12,25 +12,37 @@
         <form class="col-md-12">
             <div class="form-group">
               <label for="nome">Descrição</label>
-              <input ng-model="vm.cadastro.descricao" 
+              <input ng-model="vm.cadastro.descricao"
+                      ng-class="{'is-invalid': vm.error.descricao}" 
                       type="text" 
                       class="form-control" 
                       id="descricao">
+                      <small ng-if="vm.error.descricao" class="invalid-feedback">
+                          {{vm.error.descricao[1]}}
+                      </small>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="potencia">Potência</label>
-                <input ng-model="vm.cadastro.potencia" 
+                <input ng-model="vm.cadastro.potencia"
+                        ng-class="{'is-invalid': vm.error.potencia}"  
                         type="number" 
                         class="form-control" 
                         id="potencia">
+                        <small ng-if="vm.error.potencia" class="invalid-feedback">
+                          {{vm.error.potencia[1]}}
+                        </small>
               </div>
               <div class="form-group col-md-6">
                 <label for="tensao">Tensão</label>
-                <input ng-model="vm.cadastro.tensao" 
+                <input ng-model="vm.cadastro.tensao"
+                        ng-class="{'is-invalid': vm.error.tensao}"   
                         type="number" 
                         class="form-control" 
                         id="tensao">
+                        <small ng-if="vm.error.tensao" class="invalid-feedback">
+                          {{vm.error.tensao[1]}}
+                        </small>
               </div>
             </div>
             <div class="form-row justify-content-end">
