@@ -40,11 +40,11 @@
                         <td class="text-center">{{aparelho.potencia}}</td>
                         <td class="text-center">{{aparelho.tensao}}</td>
                         <td>
-                            <a ui-sref="AparelhosEditar({id: item.id})" class="btn btn-sm btn-link py-0">
-                                <span class="feather icon-edit"></span>
+                            <a ui-sref="AparelhosEditar({id: aparelho.id})" class="btn btn-lg btn-link py-0">
+                                <span class="fa fa-pencil"></span>
                             </a>
-                            <button ng-click="vm.excluir(item)" class="btn btn-sm btn-link text-danger py-0">
-                                <span class="feather icon-trash-2"></span>
+                            <button ng-click="vm.excluir(aparelho)" class="btn btn-lg btn-link text-danger py-0">
+                                <span class="fa fa-trash"></span>
                             </button>
                             <!--
                            <a ng-click="vm.remove(aparelho.id)" 

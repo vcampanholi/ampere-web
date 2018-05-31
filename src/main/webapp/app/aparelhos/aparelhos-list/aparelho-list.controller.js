@@ -40,8 +40,8 @@
           if (result.value) {
             AparelhoService.remove(item.id)
               .then(function () {
-                load();
                 DialogBuilder.message('Registro excluído com sucesso!');
+                inicializa();
               });
           } else {
             DialogBuilder.message({

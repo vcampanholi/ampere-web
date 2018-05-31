@@ -28,7 +28,7 @@
       .state({
         name: 'AparelhosEditar',
         url: '/aparelhos/{id}',
-        templateUrl: '/views/aparelhos/form.html',
+        templateUrl: '/app/aparelhos/aparelhos-cad/aparelho-cad.html',
         controller: 'AparelhoCadController',
         controllerAs: 'vm'
       })
