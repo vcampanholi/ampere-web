@@ -1,5 +1,7 @@
 package com.vandersoncamp.ampereweb.util;
 
+import com.vandersoncamp.ampereweb.util.exception.SqlHelperException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.*;
 import java.util.*;
@@ -288,7 +290,7 @@ public class JpaCriteriaHelper<T extends EntityID> {
      */
     public JpaCriteriaHelper<T> asc() {
         if (!orders.isEmpty()) {
-            throw new RuntimeException("Nenhum cláusula ORDER BY definida");
+            throw new SqlHelperException("Nenhum cláusula ORDER BY definida");
         }
         orders.get(orders.size() - 1).order = OrderDirection.ASC;
         return this;
@@ -301,7 +303,7 @@ public class JpaCriteriaHelper<T extends EntityID> {
      */
     public JpaCriteriaHelper<T> desc() {
         if (orders.isEmpty()) {
-            throw new RuntimeException("Nenhum cláusula ORDER BY definida");
+            throw new SqlHelperException("Nenhum cláusula ORDER BY definida");
         }
         orders.get(orders.size() - 1).order = OrderDirection.DESC;
         return this;
@@ -472,18 +474,18 @@ public class JpaCriteriaHelper<T extends EntityID> {
     private void addTowhere(List<String> fieldNames, ComparatorOperator comparator, Object valueIni, Object valueEnd, LogicalOperator logicalOperator) {
         if ((comparator.equals(ComparatorOperator.GREATER_THAN) || comparator.equals(ComparatorOperator.LESS_THAN))
                 && !(valueIni instanceof Comparable)) {
-            throw new RuntimeException("Para os tipos de operador "
+            throw new SqlHelperException("Para os tipos de operador "
                     + ComparatorOperator.GREATER_THAN + " e " + ComparatorOperator.LESS_THAN
                     + " é necessário que o objeto de valor implemente " + Comparable.class.getName() + ".");
         }
 
         if (comparator.equals(ComparatorOperator.IN) && !(valueIni instanceof Collection)) {
-            throw new RuntimeException("Para o tipo de operador " + ComparatorOperator.IN
+            throw new SqlHelperException("Para o tipo de operador " + ComparatorOperator.IN
                     + " é necessário que o objeto de valor implemente " + Collection.class.getName() + ".");
         }
 
         if (valueEnd != null && !comparator.equals(ComparatorOperator.BETWEEN)) {
-            throw new RuntimeException("Quando informados dois valores, é obrigatório o uso de " + ComparatorOperator.BETWEEN);
+            throw new SqlHelperException("Quando informados dois valores, é obrigatório o uso de " + ComparatorOperator.BETWEEN);
         }
 
         if (logicalOperator == null) {
@@ -533,7 +535,7 @@ public class JpaCriteriaHelper<T extends EntityID> {
                     predicate = criteriaBuilder.between(path, (Comparable) whereEntry.valueIni, (Comparable) whereEntry.valueEnd);
                     break;
                 default:
-                    throw new RuntimeException("Tipo de operador de comparação não conhecido: " + whereEntry.comparatorOperator);
+                    throw new SqlHelperException("Tipo de operador de comparação não conhecido: " + whereEntry.comparatorOperator);
             }
 
             if (predMaster == null) {
@@ -559,7 +561,7 @@ public class JpaCriteriaHelper<T extends EntityID> {
                     predMaster = criteriaBuilder.or(predMaster, predicate);
                     break;
                 default:
-                    throw new RuntimeException("Tipo de operador lógico não conhecido: " + whereEntry.comparatorOperator);
+                    throw new SqlHelperException("Tipo de operador lógico não conhecido: " + whereEntry.comparatorOperator);
             }
         }
         return predMaster;
