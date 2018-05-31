@@ -372,9 +372,7 @@ public class JpaCriteriaHelper<T extends EntityID> {
     }
 
     private void directFetch(Root<T> root) {
-        directFetches.forEach(fetch ->
-            root.fetch(fetch)
-        );
+        directFetches.forEach(root::fetch);
     }
 
     /**
