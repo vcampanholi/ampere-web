@@ -42,7 +42,7 @@ body.fixed-nav {
 }
 
 .scroll-to-top:hover {
-  background: #343a40;
+  background: #78c2ffbe;
 }
 
 .scroll-to-top i {
@@ -65,9 +65,14 @@ body.fixed-nav {
   z-index: 1;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
 #mainNav .navbar-collapse {
   overflow: auto;
   max-height: 75vh;
+  .navbar-expand-lg
 }
 
 #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -145,8 +150,8 @@ body.fixed-nav {
 
 @media (min-width: 992px) {
   #mainNav .navbar-brand {
-    color: #adb5bd;
-    width: 250px;
+    color: white;
+    width: 200px;
   }
   #mainNav .navbar-collapse {
     overflow: visible;
@@ -162,7 +167,7 @@ body.fixed-nav {
     margin-top: 56px;
   }
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item {
-    width: 250px;
+    width: 200px;
     padding: 0;
   }
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
@@ -172,10 +177,11 @@ body.fixed-nav {
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
     padding-left: 0;
     list-style: none;
+    
   }
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li,
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li {
-    width: 250px;
+    width: 200px;
   }
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
   #mainNav .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
@@ -218,7 +224,7 @@ body.fixed-nav {
     margin-top: calc(100vh - 56px);
   }
   #mainNav.fixed-top .sidenav-toggler > .nav-item {
-    width: 250px;
+    width: 200px;
     padding: 0;
   }
   #mainNav.fixed-top .sidenav-toggler > .nav-item > .nav-link {
@@ -227,15 +233,15 @@ body.fixed-nav {
 }
 
 #mainNav.fixed-top.navbar-dark .sidenav-toggler {
-  background-color: #212529;
+  background-color: #777b7e;
 }
 
 #mainNav.fixed-top.navbar-dark .sidenav-toggler a i {
-  color: #adb5bd;
+  color: white;
 }
 
 #mainNav.fixed-top.navbar-light .sidenav-toggler {
-  background-color: #dee2e6;
+  background-color: white;
 }
 
 #mainNav.fixed-top.navbar-light .sidenav-toggler a i {
@@ -287,7 +293,7 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
 
 @media (min-width: 992px) {
   .content-wrapper {
-    margin-left: 250px;
+    margin-left: 200px;
   }
 }
 
@@ -332,35 +338,35 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
-  color: #868e96;
+  color: white;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
-  color: #868e96;
+  color: white;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
-  color: #adb5bd;
+  color: white;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
-  color: #868e96;
+  color: white;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:focus, #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:hover,
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:focus,
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:hover {
-  color: #adb5bd;
+  color: white;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
-  color: #adb5bd;
+  color: white;
 }
 
 @media (min-width: 992px) {
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav {
-    background: #343a40;
+    background: #7fa8eeb0;
   }
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav li.active a {
     color: white !important;
@@ -371,7 +377,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   }
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
-    background: #343a40;
+    background: #7fa8eeb0;
   }
 }
 
@@ -468,7 +474,7 @@ footer.sticky-footer {
 
 @media (min-width: 992px) {
   footer.sticky-footer {
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
   }
 }
 
@@ -476,4 +482,24 @@ footer.sticky-footer {
   body.sidenav-toggled footer.sticky-footer {
     width: calc(100% - 55px);
   }
+}
+
+.btn-outline-danger {
+  color: #dc354585;
+  background-color: transparent;
+  background-image: none;
+  border-color: #dc354585;
+}
+
+.btn-outline-primary {
+  color: #2d75f1d5;
+  background-color: transparent;
+  background-image: none;
+  border-color: #2d75f1d5;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #bbc1c5fa;
+  border-color: #bbc1c5fa;
 }
