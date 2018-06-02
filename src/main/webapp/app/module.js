@@ -11,21 +11,21 @@
     $stateProvider
     
       .state({
-        name: 'aparelhosList',
+        name: 'aparelhoList',
         url: '/aparelhos',
         templateUrl: '/app/aparelhos/aparelhos-list/aparelho-list.html',
         controller: 'AparelhoListController',
         controllerAs: 'vm'
       })
       .state({
-        name: 'aparelhosNovo',
+        name: 'aparelhoNovo',
         url: '/aparelhos/novo',
         templateUrl: '/app/aparelhos/aparelhos-cad/aparelho-cad.html',
         controller: 'AparelhoCadController',
         controllerAs: 'vm'
       })
       .state({
-        name: 'aparelhosEditar',
+        name: 'aparelhoEditar',
         url: '/aparelhos/{id}',
         templateUrl: '/app/aparelhos/aparelhos-cad/aparelho-cad.html',
         controller: 'AparelhoCadController',
@@ -41,6 +41,13 @@
       .state({
         name: 'condutorNovo',
         url: '/condutores/novo',
+        templateUrl: '/app/condutores/condutores-cad/condutor-cad.html',
+        controller: 'CondutorCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'condutorEditar',
+        url: '/condutores/{id}',
         templateUrl: '/app/condutores/condutores-cad/condutor-cad.html',
         controller: 'CondutorCadController',
         controllerAs: 'vm'

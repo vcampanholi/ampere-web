@@ -9,7 +9,7 @@
           </a>          
           <h3 class="breadcrumb-item active">&ensp;Novo Aparelho</h3>
         </div>
-        <form class="col-md-12">
+        <form>
             <div class="form-group">
               <label for="nome">Descrição</label>
               <input ng-model="vm.cadastro.descricao"
@@ -47,7 +47,7 @@
             </div>
             <div class="form-row justify-content-end">
               <button ng-click="vm.salvar()" type="button" class="btn btn-outline-success mr-2">Salvar</button>
-              <a ui-sref="AparelhosList" class="btn btn-outline-danger">Cancelar</a>
+              <a ui-sref="aparelhoList" class="btn btn-outline-danger">Cancelar</a>
             </div>
           </form>
       </main>

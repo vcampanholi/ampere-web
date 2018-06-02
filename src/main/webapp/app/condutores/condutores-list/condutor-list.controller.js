@@ -1,34 +1,58 @@
-(function(){
+(function () {
   'use strict'
 
   angular.module('app')
     .controller('CondutorListController', CondutorListController);
-  
-    CondutorListController.$inject = ['CondutorService'];
-  
-  function CondutorListController(CondutorService) {
-  
-      var vm = this;
-      vm.lista = [];
-      vm.remove = remove;
-  
-      function inicializa() {
-        CondutorService.findAll()
-          .then(function (data) {
-            vm.lista = data;
-          });
-      }
 
-      function remove(id) {
-        if (confirm('Deseja realmente excluir o condutor?')) {
-          CondutorService.remove(id)
-          .then(function() {
-            alert('Condutor excluído com sucesso!!!');
-            inicializa();
-          });
-        }
-      }
+  CondutorListController.$inject = ['CondutorService', 'DialogBuilder'];
+
+  function CondutorListController(CondutorService, DialogBuilder) {
+
+    var vm = this;
+    vm.lista = {};
+    vm.filtro = '';
+    vm.page = {
+      number: 1,
+      size: '15'
+    }
+
+    vm.atualizar = inicializa;
+    vm.resetFiltro = function () {
+      vm.filtro = '';
       inicializa();
+    }
+
+    vm.goToPage = function (page) {
+      vm.page.number = page;
+      inicializa();
+    }
+
+    function inicializa() {
+      CondutorService.findAll(vm.filtro, vm.page)
+        .then(function (data) {
+          vm.lista = data;
+        });
+    }
+
+    vm.excluir = function (item) {
+      DialogBuilder.confirm('Tem certeza que deseja remover o registro?')
+        .then(function (result) {
+          if (result.value) {
+            CondutorService.remove(item.id)
+              .then(function () {
+                DialogBuilder.message('Registro excluído com sucesso!');
+                inicializa();
+              });
+          } else {
+            DialogBuilder.message({
+              title: 'Exclusão cancelada pelo usuário!',
+              type: 'error'
+            });
+          }
+        });
+    }
+
+    inicializa();
   }
 
 })();

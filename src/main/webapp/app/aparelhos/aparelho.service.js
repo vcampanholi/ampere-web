@@ -77,8 +77,6 @@
       update: update,
       remove: remove
     }
-
-
+    
   }
-
 })();

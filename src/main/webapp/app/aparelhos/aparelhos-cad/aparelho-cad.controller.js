@@ -26,7 +26,7 @@
         AparelhoService.insert(vm.cadastro)
           .then(function (dado) {
             DialogBuilder.message('Aparelho inserido com sucesso!');
-            $state.go("AparelhosList");
+            $state.go("aparelhoList");
           })
           .catch(function (error) {
             vm.error = error.data;
@@ -35,7 +35,7 @@
         AparelhoService.update(vm.cadastro)
           .then(function (dado) {
             DialogBuilder.message('Aparelho alterado com sucesso!');
-            $state.go("AparelhosList");
+            $state.go("aparelhoList");
           })
           .catch(function (error) {
             vm.error = error.data;
