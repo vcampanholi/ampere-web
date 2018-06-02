@@ -1,3 +1,4 @@
 target/
 audit.log
-.idea/*
+.idea/
+idea/
