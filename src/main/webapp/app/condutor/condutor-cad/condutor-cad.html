@@ -47,15 +47,20 @@
              </div>
              <div class="form-row">
                 <div class="form-group col-md-6">
-                      <label for="cor">Espessura</label>
-                      <input ng-model="vm.cadastro.espessura"
-                              ng-class="{'is-invalid': vm.error.espessura && !vm.cadastro.espessura}"  
-                              type="number" 
-                              class="form-control" 
-                              id="espessura">
-                      <small ng-if="vm.error.espessura && !vm.cadastro.espessura" class="invalid-feedback">
-                            {{vm.error.espessura[1]}}
-                      </small>
+                    <label for="cor">Espessura</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">mm</div>
+                        </div>
+                        <input ng-model="vm.cadastro.espessura"
+                                ng-class="{'is-invalid': vm.error.espessura && !vm.cadastro.espessura}"  
+                                type="number" 
+                                class="form-control" 
+                                id="espessura">
+                        <small ng-if="vm.error.espessura && !vm.cadastro.espessura" class="invalid-feedback">
+                              {{vm.error.espessura[1]}}
+                        </small>
+                    </div>
                 </div>
              </div>
             <div class="form-row justify-content-end">

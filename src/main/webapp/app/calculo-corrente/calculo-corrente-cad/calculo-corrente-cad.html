@@ -16,7 +16,8 @@
                     ng-class="{'is-invalid': vm.error.aparelho && !vm.cadastro.aparelho}" 
                     ng-options="item as item.descricao for item in vm.aparelhos track by item.id"            
                     ng-model="vm.cadastro.aparelho" 
-                    class="form-control">
+                    class="form-control"
+                    ng-class="{'is-invalid' : vm.error.aparelho && !vm.cadastro.aparelho}">
                 </select>
                 <small ng-if="vm.error.aparelho && !vm.cadastro.aparelho" class="invalid-feedback">
                     {{vm.error.aparelho[1]}}
@@ -26,28 +27,43 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="potencia">Potência</label>
-                  <input ng-model="vm.cadastro.potencia"
-                          type="number" 
-                          class="form-control" 
-                          id="potencia"
-                          ng-disabled="true">
+                  <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">W</div>
+                      </div>
+                      <input ng-model="vm.cadastro.potencia"
+                              type="number" 
+                              class="form-control" 
+                              id="potencia"
+                              ng-disabled="true">
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="tensao">Tensão</label>
-                  <input ng-model="vm.cadastro.tensao"
-                          type="number" 
-                          class="form-control" 
-                          id="tensao"
-                          ng-disabled="true">
+                  <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">V</div>
+                      </div>
+                      <input ng-model="vm.cadastro.tensao"
+                              type="number" 
+                              class="form-control" 
+                              id="tensao"
+                              ng-disabled="true">
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="distancia">Distância</label>
-                  <input ng-model="vm.cadastro.distancia"
-                          type="number" 
-                          class="form-control" 
-                          id="distancia">
+                  <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">mts</div>
+                      </div>
+                      <input ng-model="vm.cadastro.distancia"
+                              type="number" 
+                              class="form-control" 
+                              id="distancia">
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="quedaTensao">Queda tensão</label>
@@ -60,12 +76,21 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="corrente">Corrente Máxima</label>
-                    <input ng-model="vm.cadastro.corrente"
-                            type="number" 
-                            class="form-control" 
-                            id="corrente"
-                            ng-disabled="true">
-                  </div>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">Ah</div>
+                        </div>
+                        <input ng-model="vm.cadastro.corrente"
+                                type="number" 
+                                class="form-control" 
+                                id="corrente"
+                                ng-disabled="true"
+                                ng-class="{'is-invalid' : vm.error.corrente && !vm.cadastro.corrente}">
+                              <small ng-if="vm.error.corrente && !vm.cadastro.corrente" class="invalid-feedback">
+                                  {{vm.error.corrente[1]}}
+                              </small>
+                    </div>
+                </div>
             </div>
             <div class="form-row justify-content-end">
               <button ng-click="vm.calcular()" 
