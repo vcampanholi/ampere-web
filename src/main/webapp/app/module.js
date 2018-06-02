@@ -13,43 +13,85 @@
       .state({
         name: 'aparelhoList',
         url: '/aparelhos',
-        templateUrl: '/app/aparelhos/aparelhos-list/aparelho-list.html',
+        templateUrl: '/app/aparelho/aparelho-list/aparelho-list.html',
         controller: 'AparelhoListController',
         controllerAs: 'vm'
       })
       .state({
         name: 'aparelhoNovo',
         url: '/aparelhos/novo',
-        templateUrl: '/app/aparelhos/aparelhos-cad/aparelho-cad.html',
+        templateUrl: '/app/aparelho/aparelho-cad/aparelho-cad.html',
         controller: 'AparelhoCadController',
         controllerAs: 'vm'
       })
       .state({
         name: 'aparelhoEditar',
         url: '/aparelhos/{id}',
-        templateUrl: '/app/aparelhos/aparelhos-cad/aparelho-cad.html',
+        templateUrl: '/app/aparelho/aparelho-cad/aparelho-cad.html',
         controller: 'AparelhoCadController',
         controllerAs: 'vm'
       })
       .state({
         name: 'condutorList',
         url: '/condutores',
-        templateUrl: '/app/condutores/condutores-list/condutor-list.html',
+        templateUrl: '/app/condutor/condutor-list/condutor-list.html',
         controller: 'CondutorListController',
         controllerAs: 'vm'
       })
       .state({
         name: 'condutorNovo',
         url: '/condutores/novo',
-        templateUrl: '/app/condutores/condutores-cad/condutor-cad.html',
+        templateUrl: '/app/condutor/condutor-cad/condutor-cad.html',
         controller: 'CondutorCadController',
         controllerAs: 'vm'
       })
       .state({
         name: 'condutorEditar',
         url: '/condutores/{id}',
-        templateUrl: '/app/condutores/condutores-cad/condutor-cad.html',
+        templateUrl: '/app/condutor/condutor-cad/condutor-cad.html',
         controller: 'CondutorCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCorrenteList',
+        url: '/calculos-corrente',
+        templateUrl: '/app/calculo-corrente/calculo-corrente-list/calculo-corrente-list.html',
+        controller: 'CalculoCorrenteListController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCorrenteNovo',
+        url: '/calculos-corrente/novo',
+        templateUrl: '/app/calculo-corrente/calculo-corrente-cad/calculo-corrente-cad.html',
+        controller: 'CalculoCorrenteCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCorrenteEditar',
+        url: '/calculos-corrente/{id}',
+        templateUrl: '/app/calculo-corrente/calculo-corrente-cad/calculo-corrente-cad.html',
+        controller: 'CalculoCorrenteCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCargaList',
+        url: '/calculos-carga',
+        templateUrl: '/app/calculo-carga/calculo-carga-list/calculo-carga-list.html',
+        controller: 'CalculoCargaListController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCargaNovo',
+        url: '/calculos-carga/novo',
+        templateUrl: '/app/calculo-carga/calculo-carga-cad/calculo-carga-cad.html',
+        controller: 'CalculoCargaCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCargaEditar',
+        url: '/calculos-carga/{id}',
+        templateUrl: '/app/calculo-carga/calculo-carga-cad/calculo-carga-cad.html',
+        controller: 'CalculoCargaCadController',
         controllerAs: 'vm'
       })
   }

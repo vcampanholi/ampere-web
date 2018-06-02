@@ -25,20 +25,14 @@
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Aparelhos">
                   <a class="nav-link" ui-sref="aparelhoList">
-                  <i class="fa fa-fw fa-dashboard"></i>
+                  <i class="fa fa-fw fa-laptop"></i>
                   <span class="nav-link-text">Aparelhos</span>
                   </a>
                </li>
                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Condutores">
                   <a class="nav-link" ui-sref="condutorList">
-                  <i class="fa fa-fw fa-area-chart"></i>
+                  <i class="fa fa-fw fa-flash"></i>
                   <span class="nav-link-text">Condutores</span>
-                  </a>
-               </li>
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cargas">
-                  <a class="nav-link" href="carga-list.html">
-                  <i class="fa fa-fw fa-table"></i>
-                  <span class="nav-link-text">Cargas</span>
                   </a>
                </li>
                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cálculos">
@@ -46,16 +40,22 @@
                      data-toggle="collapse" 
                      href="#collapseCalculos" 
                      data-parent="#exampleAccordion">
-                  <i class="fa fa-fw fa-wrench"></i>
+                  <i class="fa fa-fw fa-calculator"></i>
                   <span class="nav-link-text">Cálculos</span>
                   </a>
                   <ul class="sidenav-second-level collapse" id="collapseCalculos">
-                     <li>
-                        <a href="conducaoCorrente-list.html">Condução de Corrente</a>
-                     </li>
-                     <li>
-                        <a href="dimensionamentoCondutor-list.html">Dimensionamento de Condutor</a>
-                     </li>
+                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Condução de Corrente">
+                        <a class="nav-link" ui-sref="calculoCorrenteList">
+                        <i class="fa fa-fw fa-area-chart"></i>
+                        <span class="nav-link-text">Condução de Corrente</span>
+                        </a>
+                      </li>
+                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cargas">
+                          <a class="nav-link" ui-sref="calculoCargaList">
+                          <i class="fa fa-fw fa-line-chart"></i>
+                          <span class="nav-link-text">Dimensionamento de Cargas</span>
+                          </a>
+                        </li>
                   </ul>
                </li>
             </ul>
@@ -223,14 +223,22 @@
 
          <script src="app/acesso/login.controller.js"></script>
 
-         <script src="app/aparelhos/aparelhos-cad/aparelho-cad.controller.js"></script>
-         <script src="app/aparelhos/aparelhos-list/aparelho-list.controller.js"></script>
+         <script src="app/aparelho/aparelho-cad/aparelho-cad.controller.js"></script>
+         <script src="app/aparelho/aparelho-list/aparelho-list.controller.js"></script>
 
-         <script src="app/condutores/condutores-cad/condutor-cad.controller.js"></script>
-         <script src="app/condutores/condutores-list/condutor-list.controller.js"></script>
+         <script src="app/condutor/condutor-cad/condutor-cad.controller.js"></script>
+         <script src="app/condutor/condutor-list/condutor-list.controller.js"></script>
 
-         <script src="app/aparelhos/aparelho.service.js"></script>
-         <script src="app/condutores/condutor.service.js"></script>
+         <script src="app/calculo-corrente/calculo-corrente-cad/calculo-corrente-cad.controller.js"></script>
+         <script src="app/calculo-corrente/calculo-corrente-list/calculo-corrente-list.controller.js"></script>
+
+         <script src="app/calculo-carga/calculo-carga-cad/calculo-carga-cad.controller.js"></script>
+         <script src="app/calculo-carga/calculo-carga-list/calculo-carga-list.controller.js"></script>
+
+         <script src="app/aparelho/aparelho.service.js"></script>
+         <script src="app/condutor/condutor.service.js"></script>
+         <script src="app/calculo-corrente/calculo-corrente.service.js"></script>
+         <script src="app/calculo-carga/calculo-carga.service.js"></script>
 
       </div>
    </body>

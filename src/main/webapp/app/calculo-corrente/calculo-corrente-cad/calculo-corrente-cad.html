@@ -1,0 +1,87 @@
+<html ng-app="app">
+  <div class="container">
+    <div class="row">
+      <main role="main" class="col-md-10 ml-sm-auto col-lg-12">
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">                
+          <a href="javascript:window.history.go(-1)" 
+            class="fa fa-arrow-left pt-1 pb-1 mb-2" 
+            style="font-size:30px;color:gray">
+          </a>          
+          <h3 class="breadcrumb-item active">&ensp;Novo Cálculo</h3>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="descricao">Aparelho</label>
+                <select 
+                    ng-class="{'is-invalid': vm.error.aparelho && !vm.cadastro.aparelho}" 
+                    ng-options="item as item.descricao for item in vm.aparelhos track by item.id"            
+                    ng-model="vm.cadastro.aparelho" 
+                    class="form-control">
+                </select>
+                <small ng-if="vm.error.aparelho && !vm.cadastro.aparelho" class="invalid-feedback">
+                    {{vm.error.aparelho[1]}}
+                </small>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="potencia">Potência</label>
+                  <input ng-model="vm.cadastro.potencia"
+                          type="number" 
+                          class="form-control" 
+                          id="potencia"
+                          ng-disabled="true">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="tensao">Tensão</label>
+                  <input ng-model="vm.cadastro.tensao"
+                          type="number" 
+                          class="form-control" 
+                          id="tensao"
+                          ng-disabled="true">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="distancia">Distância</label>
+                  <input ng-model="vm.cadastro.distancia"
+                          type="number" 
+                          class="form-control" 
+                          id="distancia">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="quedaTensao">Queda tensão</label>
+                  <input ng-model="vm.cadastro.quedaTensao"
+                          type="number" 
+                          class="form-control" 
+                          id="quedaTensao">
+                </div>                
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="corrente">Corrente Máxima</label>
+                    <input ng-model="vm.cadastro.corrente"
+                            type="number" 
+                            class="form-control" 
+                            id="corrente"
+                            ng-disabled="true">
+                  </div>
+            </div>
+            <div class="form-row justify-content-end">
+              <button ng-click="vm.calcular()" 
+                      type="button" 
+                      class="btn btn-outline-primary mr-2">Calcular
+              </button>
+              <button ng-click="vm.salvar()" 
+                      ng-disabled="!vm.cadastro.corrente" 
+                      type="button" 
+                      class="btn btn-outline-success mr-2">Salvar Cálculo
+              </button>
+              <a ui-sref="calculoCorrenteList" class="btn btn-outline-danger">Cancelar</a>
+            </div>
+          </form>
+          
+      </main>
+    </div>
+  </div>
+</html>

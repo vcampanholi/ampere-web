@@ -1,0 +1,68 @@
+<html ng-app="app">
+  <div class="container">
+    <div class="row">
+      <main role="main" class="col-md-10 ml-sm-auto col-lg-12">
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">                
+          <a href="javascript:window.history.go(-1)" 
+            class="fa fa-arrow-left pt-1 pb-1 mb-2" 
+            style="font-size:30px;color:gray">
+          </a>          
+          <h3 class="breadcrumb-item active">&ensp;Novo Cálculo</h3>
+        </div>
+        <form><div class="form-group">
+            <label for="descricao">Aparelho</label>
+            <select 
+                ng-class="{'is-invalid': vm.error.aparelho && !vm.cadastro.aparelho}" 
+                ng-options="item as item.descricao for item in vm.aparelhos track by item.id"            
+                ng-model="vm.cadastro.aparelho" 
+                class="form-control">
+            </select>
+            <small ng-if="vm.error.aparelho && !vm.cadastro.aparelho" class="invalid-feedback">
+                {{vm.error.aparelho[1]}}
+            </small>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="corrente">Corrente</label>
+              <input ng-model="vm.cadastro.corrente"
+                      type="number" 
+                      class="form-control" 
+                      id="corrente"
+                      ng-disabled="true">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="protecao">Proteção</label>
+              <input ng-model="vm.cadastro.protecao"
+                      type="number" 
+                      class="form-control" 
+                      id="protecao"
+                      ng-disabled="true">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="diametroCondutor">Diâmetro Mínimo Condutor</label>
+                <input ng-model="vm.cadastro.diametroCondutor"
+                        type="number" 
+                        class="form-control" 
+                        id="diametroCondutor"
+                        ng-disabled="true">
+              </div>
+        </div>
+        
+        <div class="form-row justify-content-end">
+            <button ng-click="vm.calcular()" 
+                    type="button" 
+                    class="btn btn-outline-primary mr-2">Calcular
+            </button>
+            <button ng-click="vm.salvar()" 
+                    ng-disabled="!vm.cadastro.diametroCondutor || !vm.cadastro.protecao || !vm.cadastro.corrente"  
+                    type="button" 
+                    class="!btn btn-outline-success mr-2">Salvar Cálculo
+            </button>
+            <a ui-sref="calculoCargaList" class="btn btn-outline-danger">Cancelar</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</html>
