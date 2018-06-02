@@ -25,7 +25,7 @@
                                     class= "btn btn-outline-primary mr-4"
                                     ng-click="vm.atualizar()">
                                     <i class="fa fa-search"></i></button>
-                            <a ui-sref="AparelhosNovo" class="btn btn-outline-primary">Adicionar</a>
+                            <a ui-sref="aparelhoNovo" class="btn btn-outline-primary">Adicionar</a>
                         </div>
                     </div>
                </div>
@@ -48,7 +48,7 @@
                         <td class="text-center">{{aparelho.potencia}}</td>
                         <td class="text-center">{{aparelho.tensao}}</td>
                         <td class="text-right">
-                            <button ui-sref="AparelhosEditar({id: aparelho.id})" class="btn btn-outline-secondary py-0">
+                            <button ui-sref="aparelhoEditar({id: aparelho.id})" class="btn btn-outline-secondary py-0">
                                 <span class="fa fa-pencil"></span>
                             </button>
 
