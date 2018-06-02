@@ -29,7 +29,7 @@
                           type="text" 
                           class="form-control" 
                           id="tipo">
-                   <small ng-if="vm.error.descricao && !vm.cadastro.tipo" class="invalid-feedback">
+                   <small ng-if="vm.error.tipo && !vm.cadastro.tipo" class="invalid-feedback">
                       {{vm.error.tipo[1]}}
                    </small>
                 </div>
@@ -40,7 +40,7 @@
                           type="text" 
                           class="form-control" 
                           id="cor">
-                   <small ng-if="vm.error.descricao && !vm.cadastro.cor" class="invalid-feedback">
+                   <small ng-if="vm.error.cor && !vm.cadastro.cor" class="invalid-feedback">
                       {{vm.error.cor[1]}}
                    </small>
                 </div>
@@ -53,7 +53,7 @@
                               type="number" 
                               class="form-control" 
                               id="espessura">
-                      <small ng-if="vm.error.descricao && !vm.cadastro.espessura" class="invalid-feedback">
+                      <small ng-if="vm.error.espessura && !vm.cadastro.espessura" class="invalid-feedback">
                             {{vm.error.espessura[1]}}
                       </small>
                 </div>
