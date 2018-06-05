@@ -4,7 +4,7 @@
   angular.module('app')
     .controller('CalculoCorrenteCadController', CalculoCorrenteCadController);
 
-    CalculoCorrenteCadController.$inject = ['CalculoCorrenteService', '$state', '$stateParams', 'DialogBuilder', 'AparelhoService'];
+  CalculoCorrenteCadController.$inject = ['CalculoCorrenteService', '$state', '$stateParams', 'DialogBuilder', 'AparelhoService'];
 
   function CalculoCorrenteCadController(CalculoCorrenteService, $state, $stateParams, DialogBuilder, AparelhoService) {
 
@@ -14,6 +14,18 @@
     vm.aparelhos = [];
 
     vm.salvar = salvar;
+    vm.calcular = calcular;
+
+    function calcular(item) {
+      if (item && item.aparelho) {
+        var tensao = item.aparelho.tensao;
+        var potencia = item.aparelho.potencia;
+
+        var calculoCorrente = (potencia / tensao);
+
+        vm.cadastro.corrente = Number(calculoCorrente.toFixed(2));
+      }
+    }
 
     AparelhoService.findAllOver()
       .then(function (data) {

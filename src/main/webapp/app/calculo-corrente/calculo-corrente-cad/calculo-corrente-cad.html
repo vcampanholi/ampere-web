@@ -31,7 +31,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">W</div>
                       </div>
-                      <input ng-model="vm.cadastro.potencia"
+                      <input ng-model="vm.cadastro.aparelho.potencia"
                               type="number" 
                               class="form-control" 
                               id="potencia"
@@ -44,7 +44,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">V</div>
                       </div>
-                      <input ng-model="vm.cadastro.tensao"
+                      <input ng-model="vm.cadastro.aparelho.tensao"
                               type="number" 
                               class="form-control" 
                               id="tensao"
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="form-row justify-content-end">
-              <button ng-click="vm.calcular()" 
+              <button ng-click="vm.calcular(vm.cadastro)" 
                       type="button" 
                       class="btn btn-outline-primary mr-2">Calcular
               </button>
