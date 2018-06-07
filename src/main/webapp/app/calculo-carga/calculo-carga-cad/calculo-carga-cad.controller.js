@@ -14,6 +14,34 @@
     vm.aparelhos = [];
 
     vm.salvar = salvar;
+    vm.changeAparelho = changeAparelho;
+    vm.calcular = calcular;
+
+    function calcular(item) {
+      vm.cadastro.protecao = calculaProtecao();
+      vm.cadastro.diametroCondutor = calculaCondutor();
+    }
+
+    function calculaProtecao() {
+      return 1;
+
+    }
+
+    function calculaCondutor() {
+      return 2;
+    }
+
+    function changeAparelho(aparelho) {
+      if (aparelho) {
+        var tensao = aparelho.tensao;
+        var potencia = aparelho.potencia;
+        var calculoCorrente = (potencia / tensao);
+        vm.cadastro.corrente = Number(calculoCorrente.toFixed(2));
+        
+        vm.cadastro.protecao = undefined;
+        vm.cadastro.diametroCondutor = undefined
+      }
+    }
 
     AparelhoService.findAllOver()
     .then(function (data) {
@@ -32,7 +60,7 @@
         CalculoCargaService.insert(vm.cadastro)
           .then(function (dado) {
             DialogBuilder.message('Cálculo inserido com sucesso!');
-            $state.go("cargaList");
+            $state.go("calculoCargaList");
           })
           .catch(function (error) {
             vm.error = error.data;
@@ -41,7 +69,7 @@
         CalculoCargaService.update(vm.cadastro)
           .then(function (dado) {
             DialogBuilder.message('Cálculo alterado com sucesso!');
-            $state.go("cargaList");
+            $state.go("calculoCargaList");
           })
           .catch(function (error) {
             vm.error = error.data;

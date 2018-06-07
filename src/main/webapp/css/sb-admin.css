@@ -16,6 +16,7 @@ body.sticky-footer .content-wrapper {
 }
 
 body.fixed-nav {
+  color: #272729cc;
   padding-top: 56px;
 }
 

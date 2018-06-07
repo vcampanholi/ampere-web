@@ -14,9 +14,9 @@
             <select 
                 ng-class="{'is-invalid': vm.error.aparelho && !vm.cadastro.aparelho}" 
                 ng-options="item as item.descricao for item in vm.aparelhos track by item.id"            
-                ng-model="vm.cadastro.aparelho" 
-                class="form-control"
-                ng-class="{'is-invalid' : vm.error.descricao && !vm.cadastro.aparelho}">
+                ng-model="vm.cadastro.aparelho"
+                ng-change="vm.changeAparelho(vm.cadastro.aparelho)"
+                class="form-control">
             </select>
             <small ng-if="vm.error.aparelho && !vm.cadastro.aparelho" class="invalid-feedback">
                 {{vm.error.aparelho[1]}}
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="form-group col-md-4">
-              <label for="protecao">Proteção</label>
+              <label for="protecao">Corrente de Proteção</label>
               <div class="input-group mb-2">
                   <div class="input-group-prepend">
                     <div class="input-group-text">Ah</div>
@@ -78,7 +78,7 @@
         </div>
         
         <div class="form-row justify-content-end">
-            <button ng-click="vm.calcular()" 
+            <button ng-click="vm.calcular(vm.cadastro)" 
                     type="button" 
                     class="btn btn-outline-primary mr-2">Calcular
             </button>
