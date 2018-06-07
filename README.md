@@ -27,5 +27,5 @@ mvn clean test
 ```
 
 ## Build e Análise
-- Build remoto: [Travis CI](https://travis-ci.com/vandersozc/Bankslip).
+- Build remoto: [Travis CI](https://travis-ci.com/vandersozc/AmpereWeb).
 - Qualidade de código: [SonarCLoud](https://sonarcloud.io/dashboard?id=com.vandersoncamp%3Aampereweb).
