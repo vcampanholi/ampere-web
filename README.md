@@ -1,7 +1,6 @@
 # AmpereWeb
 
 [![Build Status](https://travis-ci.com/vandersozc/AmpereWeb.svg?branch=master)](https://travis-ci.com/vandersozc/AmpereWeb)
-
 [![SonarQube Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.vandersoncamp%3Aampereweb&metric=coverage#.svg)](https://sonarcloud.io/dashboard?id=com.vandersoncamp%3Aampereweb)
 
 
