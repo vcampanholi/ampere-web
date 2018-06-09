@@ -2,7 +2,12 @@
 
 [![Build Status](https://travis-ci.com/vandersozc/AmpereWeb.svg?branch=master)](https://travis-ci.com/vandersozc/AmpereWeb)
 [![GitHub stars](https://img.shields.io/github/stars/vandersozc/AmpereWeb.svg)](https://github.com/vandersozc/AmpereWeb/stargazers)
-[![SonarQube Coverage](https://img.shields.io/sonar/http/sonar.petalslink.com/org.ow2.petals%3Apetals-se-ase/coverage.svg)](https://sonarcloud.io/dashboard?id=com.vandersoncamp%3Aampereweb)
+[![SonarQube Coverage](https://sonarcloud.io/api/badges/measure?key=com.vandersoncamp%3Aampereweb&metric=coverage#.svg)](https://sonarcloud.io/dashboard?id=com.vandersoncamp%3Aampereweb)
+
+
+
+<!--
+https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=lines#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=bugs#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=new_bugs#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=vulnerabilities#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=new_vulnerabilities#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=code_smells#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=new_code_smells#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=coverage#.svg https://sonarcloud.io/api/badges/measure?key=no.priv.bang.ukelonn%3Aparent&metric=new_coverage#.svg-->
 
 
 ## Projeto
