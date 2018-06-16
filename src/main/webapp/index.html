@@ -23,6 +23,12 @@
          </button>
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Usuários">
+                    <a class="nav-link" ui-sref="usuarioList">
+                    <i class="fa fa-fw fa-user-o"></i>
+                    <span class="nav-link-text">Usuários</span>
+                    </a>
+                 </li>
                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Aparelhos">
                   <a class="nav-link" ui-sref="aparelhoList">
                   <i class="fa fa-fw fa-laptop"></i>
@@ -44,18 +50,24 @@
                   <span class="nav-link-text">Cálculos</span>
                   </a>
                   <ul class="sidenav-second-level collapse" id="collapseCalculos">
-                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Condução de Corrente">
+                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Corrente">
                         <a class="nav-link" ui-sref="calculoCorrenteList">
                         <i class="fa fa-fw fa-area-chart"></i>
-                        <span class="nav-link-text">Condução de Corrente</span>
+                        <span class="nav-link-text">Corrente</span>
                         </a>
                       </li>
-                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cargas">
-                          <a class="nav-link" ui-sref="calculoCargaList">
-                          <i class="fa fa-fw fa-line-chart"></i>
-                          <span class="nav-link-text">Dimensionamento de Cargas</span>
-                          </a>
-                        </li>
+                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Aparelhos">
+                        <a class="nav-link" ui-sref="calculoCargaList">
+                        <i class="fa fa-fw fa-line-chart"></i>
+                        <span class="nav-link-text">Aparelhos</span>
+                        </a>
+                      </li>
+                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Circuitos">
+                        <a class="nav-link" ui-sref="calculoCircuitoList">
+                        <i class="fa fa-fw fa-line-chart"></i>
+                        <span class="nav-link-text">Circuitos</span>
+                        </a>
+                      </li>
                   </ul>
                </li>
             </ul>
@@ -84,19 +96,6 @@
                      <a class="dropdown-item small" href="#">Ver totas</a>
                   </div>
                </li>
-               <!--
-               <li class="nav-item">
-                  <form class="form-inline my-2 my-lg-0 mr-lg-2">
-                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Buscar...">
-                        <span class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                        <i class="fa fa-search"></i>
-                        </button>
-                        </span>
-                     </div>
-                  </form>
-               </li> -->
                <li class="nav-item">
                   <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
                   <i class="fa fa-fw fa-sign-out"></i>Sair</a>
@@ -226,6 +225,9 @@
          <script src="app/aparelho/aparelho-cad/aparelho-cad.controller.js"></script>
          <script src="app/aparelho/aparelho-list/aparelho-list.controller.js"></script>
 
+         <script src="app/usuario/usuario-cad/usuario-cad.controller.js"></script>
+         <script src="app/usuario/usuario-list/usuario-list.controller.js"></script>
+
          <script src="app/condutor/condutor-cad/condutor-cad.controller.js"></script>
          <script src="app/condutor/condutor-list/condutor-list.controller.js"></script>
 
@@ -236,6 +238,7 @@
          <script src="app/calculo-carga/calculo-carga-list/calculo-carga-list.controller.js"></script>
 
          <script src="app/aparelho/aparelho.service.js"></script>
+         <script src="app/usuario/usuario.service.js"></script>
          <script src="app/condutor/condutor.service.js"></script>
          <script src="app/calculo-corrente/calculo-corrente.service.js"></script>
          <script src="app/calculo-carga/calculo-carga.service.js"></script>
