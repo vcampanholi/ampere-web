@@ -1,0 +1,79 @@
+<html ng-app="app">
+  <div class="container">
+    <div class="row">
+      <main role="main" class="col-md-10 ml-sm-auto col-lg-12">
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">                
+          <a href="javascript:window.history.go(-1)" 
+            class="fa fa-arrow-left pt-1 pb-1 mb-2" 
+            style="font-size:30px;color:gray">
+          </a>          
+          <h3 class="breadcrumb-item active">&ensp;Usuário</h3>
+        </div>
+        <form>
+            <div class="form-row">
+              <div class="form-group col-md-9">
+                <label for="nome">Nome</label>
+                <input ng-model="vm.cadastro.nome"
+                        ng-class="{'is-invalid' : vm.error.nome && !vm.cadastro.nome}"
+                        type="text" 
+                        class="form-control" 
+                        id="nome">
+                        <small ng-if="vm.error.nome && !vm.cadastro.nome" class="invalid-feedback">
+                            {{vm.error.nome[1]}}
+                        </small>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="tipo">Tipo de Usuário</label>
+                  <div class="padding" ng-cloak></div>
+                    <select ng-model="vm.cadastro.tipo" selected-text="getSelectedText()" class="form-control" >
+                        <option value="ELETRICISTA">Eletricista</option>
+                        <option value="TECNICO">Técnico</option>
+                        <option value="ENGENHEIRO">Engenheiro</option>
+                        <option value="OUTROS" selected>Outros</option>
+                    </select>
+                    <small ng-if="vm.error.tipo && !vm.cadastro.tipo" class="invalid-feedback">
+                      {{vm.error.tipo[1]}}
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+            
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="telefone">Telefone</label>
+                
+                  <input ng-model="vm.cadastro.telefone"
+                          ng-class="{'is-invalid' : vm.error.telefone && !vm.cadastro.telefone}"
+                          type="text"
+                          class="form-control"
+                          placeholder="(00) 0000-0000"
+                          maxlength="11"
+                          id="telefone">
+                          <small ng-if="vm.error.telefone && !vm.cadastro.telefone" class="invalid-feedback">
+                              {{vm.error.telefone[1]}}
+                          </small>
+              </div>
+              <div class="form-group col-md-8">
+                <label for="email">E-mail</label>
+                <div class="input-group mb-2">
+                    <input ng-model="vm.cadastro.email"
+                            ng-class="{'is-invalid': vm.error.email && !vm.cadastro.email}"   
+                            type="email" 
+                            class="form-control" 
+                            id="email">
+                            <small ng-if="vm.error.email && !vm.cadastro.email" class="invalid-feedback">
+                              {{vm.error.email[1]}}
+                            </small>
+                  </div>
+              </div>
+            </div>
+            <div class="form-row justify-content-end">
+              <button ng-click="vm.salvar()" type="button" class="btn btn-outline-success mr-2">Salvar</button>
+              <a ui-sref="usuarioList" class="btn btn-outline-danger">Cancelar</a>
+            </div>
+          </form>
+      </main>
+    </div>
+  </div>
+</html>

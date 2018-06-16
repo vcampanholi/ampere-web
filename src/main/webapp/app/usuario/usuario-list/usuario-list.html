@@ -1,0 +1,104 @@
+<html ng-app="app">
+   <div class="container-fluid">
+      <div class="row">
+         <main role="main" class="col-md-12 ml-sm-auto col-lg-12">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">
+               <h3 class="breadcrumb-item active">Listagem de Usuários</h3>
+               
+               <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="input-group">
+                        <input type="text" 
+                               ng-model="vm.filtro" 
+                               class="form-control" 
+                               placeholder="Buscar" 
+                               aria-label="Buscar" 
+                               aria-describedby="btnGroupAddon">
+                        <div class="input-group-append">
+                            <button type="button" 
+                                    ng-click="vm.resetFiltro()" 
+                                    class="btn btn-sm btn-secondary mr-1">
+                                <span class="fa fa-times"></span>
+                            </button>
+                        </div>
+                        <div class="form-row justify-content-between">
+                            <button type="button" 
+                                    class= "btn btn-outline-primary mr-4"
+                                    ng-click="vm.atualizar()">
+                                    <i class="fa fa-search"></i></button>
+                            <a ui-sref="usuarioNovo" class="btn btn-outline-primary">Adicionar</a>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-hover table-sm">
+                  <thead>
+                     <tr>
+                        <th class="text-right" width="25px">Código</th>
+                        <th>Nome</th>
+                        <th class="text-center">Telefone</th>
+                        <th class="text-center">Tipo</th>
+                        <th class="text-center">E-mail</th>
+                        <th></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr ng-repeat="usuario in vm.lista.registros">
+                        <td class="text-center">{{$index +1}}</td>
+                        <td>{{usuario.nome}}</td>
+                        <td class="text-center">{{usuario.telefone}}</td>
+                        <td class="text-center">{{vm.convertEnum(usuario.tipo)}}</td>
+                        <td class="text-center">{{usuario.email}}</td>
+                        <td class="text-right">
+                            <button ui-sref="usuarioEditar({id: usuario.id})" class="btn btn-outline-secondary py-0">
+                                <span class="fa fa-pencil"></span>
+                            </button>
+
+                            <button ng-click="vm.excluir(usuario)" class="btn btn-outline-danger py-0">
+                                <span class="fa fa-trash"></span>
+                            </button>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <nav class="navbar">
+                    <ul class="navbar-nav col-sm-3">
+                        <li class="nav-item">
+                            <div class="form-group row mb-0">
+                                <label class="col-sm-7 col-form-label px-0">Itens por página:</label>
+                                <div class="col-sm-5">
+                                    <select ng-model="vm.page.size" ng-change="vm.atualizar()" class="form-control p-0">
+                                        <option value="15">15</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            Registros {{vm.lista.currentPage * vm.lista.pageSize - vm.lista.pageSize + 1}} a {{vm.lista.currentPage * vm.lista.pageSize > vm.lista.total ? vm.lista.total : vm.lista.currentPage * vm.lista.pageSize}} de um total de {{vm.lista.total}}.
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <nav>
+                            <ul class="pagination justify-content-end mb-0">
+                                <li class="page-item" ng-class="{'disabled': vm.lista.currentPage == 1}">
+                                    <button ng-click="vm.goToPage(vm.page.number-1)" type="button" class="page-link" tabindex="-1">Anterior</button>
+                                </li>
+                                <li ng-repeat="item in vm.lista.pages" class="page-item" ng-class="{'disabled': vm.lista.currentPage == item}">
+                                    <button ng-click="vm.goToPage(item)" type="button" class="page-link" tabindex="-1">{{item}}</button>
+                                </li>
+                                <li class="page-item" ng-class="{'disabled': vm.lista.total <= vm.lista.currentPage * vm.lista.pageSize}">
+                                    <button ng-click="vm.goToPage(vm.page.number+1)" type="button" class="page-link" tabindex="-1">Próxima</button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </form>
+                </nav>
+            </div>
+         </main>
+      </div>
+   </div>
+</html>
