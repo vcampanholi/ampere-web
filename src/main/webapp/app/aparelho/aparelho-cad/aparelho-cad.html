@@ -49,7 +49,8 @@
                     <input ng-model="vm.cadastro.tensao"
                             ng-class="{'is-invalid': vm.error.tensao && !vm.cadastro.tensao}"   
                             type="number" 
-                            class="form-control" 
+                            class="form-control"
+                            ng-disabled="true" 
                             id="tensao">
                             <small ng-if="vm.error.tensao && !vm.cadastro.tensao" class="invalid-feedback">
                               {{vm.error.tensao[1]}}

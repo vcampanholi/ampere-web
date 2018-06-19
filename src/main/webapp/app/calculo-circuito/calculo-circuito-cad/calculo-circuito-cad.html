@@ -1,0 +1,138 @@
+<html ng-app="app">
+<div class="container">
+    <div class="row">
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-12">
+        <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-2">
+            <a href="javascript:window.history.go(-1)" class="fa fa-arrow-left pt-1 pb-1 mb-2" style="font-size:30px;color:gray">
+            </a>
+            <h3 class="breadcrumb-item active">&ensp;Novo Cálculo de Circuito</h3>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="aparelho">Descrição</label>
+                <input ng-model="vm.cadastro.descricao"
+                        ng-class="{'is-invalid' : vm.error.descricao && !vm.cadastro.descricao}"
+                        type="text" 
+                        class="form-control" 
+                        id="descricao">
+                        <small ng-if="vm.error.descricao && !vm.cadastro.descricao" class="invalid-feedback">
+                            {{vm.error.descricao[1]}}
+                        </small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="potencia">Potência Total</label>
+                    <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">W</div>
+                    </div>
+                        <input ng-model="vm.cadastro.potencia"
+                                type="number" 
+                                class="form-control" 
+                                id="corrente"
+                                ng-disabled="true">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="corrente">Corrente de Total</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">Ah</div>
+                        </div>
+                        <input ng-model="vm.cadastro.corrente"
+                                type="number" 
+                                class="form-control" 
+                                id="corrente"
+                                ng-disabled="true">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <div class="text-right m-2">
+                <button ng-click="vm.novoAparelho()" 
+                        data-toggle="modal" 
+                        data-target="#formAparelho"
+                        ng-disabled="!vm.cadastro.descricao" 
+                        type="button" 
+                        class="btn btn-sm btn-outline-primary">
+                    <span class="feather icon-plus"></span>
+                    <span>Novo Aparelho</span>
+                </button>
+            </div>
+            <table class="table table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th class="text-right" width="25px">Código</th>
+                        <th class="text-left">Aparelho</th>
+                        <th class="text-center">Potência(Watts)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in vm.cadastro.itens">
+                        <td class="text-center">{{$index +1}}</td>
+                        <td>{{item.aparelho.descricao}}</td>
+                        <td class="text-center">{{item.aparelho.potencia}}</td>
+                        <td class="text-right">
+                            <button ng-click="vm.editarAparelho(item)" 
+                                    data-toggle="modal" 
+                                    data-target="#formAparelho" 
+                                    class="btn btn-outline-secondary py-0">
+                                <span class="fa fa-pencil"></span>
+                            </button>
+                            <button ng-click="vm.excluirAparelho(item)" 
+                                    class="btn btn-outline-danger py-0">
+                                <span class="fa fa-trash"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-row justify-content-end">
+            <button ng-click="vm.salvar()" 
+                    type="button" 
+                    class="btn btn-outline-success mr-2">Salvar
+            </button>
+            <a ui-sref="calculoCircuitoList" 
+               class="btn btn-outline-danger">Cancelar
+            </a>
+        </div>
+
+        <!-- Modal de aparelhos -->
+        <div class="modal fade" id="formAparelho" tabindex="-1" role="dialog" aria-labelledby="formAparelho" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Selecione um aparelho</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="aparelho">Aparelho</label>
+                            <select ng-options="item as item.descricao for item in vm.aparelhos track by item.id"
+                                    ng-model="vm.itemLista.aparelho" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                      <div class="modal-footer">
+                        <button type="button" 
+                                ng-click="vm.salvarAparelho()" 
+                                class="btn btn-outline-success mr-2"
+                                ng-disabled="!vm.itemLista.aparelho" 
+                                data-dismiss="modal">Adicionar
+                        </button>
+                        <button type="button" 
+                                class="btn btn-outline-danger" 
+                                data-dismiss="modal">Fechar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

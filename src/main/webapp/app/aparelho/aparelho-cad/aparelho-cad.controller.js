@@ -11,6 +11,7 @@
     var vm = this;
     vm.cadastro = {};
     vm.error = {};
+    vm.cadastro.tensao = 220;
 
     vm.salvar = salvar;
 

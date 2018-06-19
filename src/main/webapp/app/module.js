@@ -11,6 +11,27 @@
     $stateProvider
     
       .state({
+        name: 'usuarioList',
+        url: '/usuarios',
+        templateUrl: '/app/usuario/usuario-list/usuario-list.html',
+        controller: 'UsuarioListController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'usuarioNovo',
+        url: '/usuarios/novo',
+        templateUrl: '/app/usuario/usuario-cad/usuario-cad.html',
+        controller: 'UsuarioCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'usuarioEditar',
+        url: '/usuarios/{id}',
+        templateUrl: '/app/usuario/usuario-cad/usuario-cad.html',
+        controller: 'UsuarioCadController',
+        controllerAs: 'vm'
+      })
+      .state({
         name: 'aparelhoList',
         url: '/aparelhos',
         templateUrl: '/app/aparelho/aparelho-list/aparelho-list.html',
@@ -94,5 +115,27 @@
         controller: 'CalculoCargaCadController',
         controllerAs: 'vm'
       })
+      .state({
+        name: 'calculoCircuitoList',
+        url: '/calculos-circuito',
+        templateUrl: '/app/calculo-circuito/calculo-circuito-list/calculo-circuito-list.html',
+        controller: 'CalculoCircuitoListController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCircuitoNovo',
+        url: '/calculos-circuito/novo',
+        templateUrl: '/app/calculo-circuito/calculo-circuito-cad/calculo-circuito-cad.html',
+        controller: 'CalculoCircuitoCadController',
+        controllerAs: 'vm'
+      })
+      .state({
+        name: 'calculoCircuitoEditar',
+        url: '/calculos-circuito/{id}',
+        templateUrl: '/app/calculo-circuito/calculo-circuito-cad/calculo-circuito-cad.html',
+        controller: 'CalculoCircuitoCadController',
+        controllerAs: 'vm'
+      })
+
   }
 })();
