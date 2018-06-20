@@ -24,16 +24,16 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="potencia">Potência</label>
-                
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                       <div class="input-group-text">W</div>
                     </div>
                     <input ng-model="vm.cadastro.potencia"
                         ng-class="{'is-invalid': vm.error.potencia && !vm.cadastro.potencia}"  
-                        type="number" 
+                        type="text" 
                         class="form-control" 
-                        id="potencia">
+                        name="potencia"
+                        ui-number-mask>
                         <small ng-if="vm.error.potencia && !vm.cadastro.potencia" class="invalid-feedback">
                             {{vm.error.potencia[1]}}
                           </small>

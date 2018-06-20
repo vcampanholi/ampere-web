@@ -28,9 +28,10 @@
                         <div class="input-group-text">W</div>
                     </div>
                         <input ng-model="vm.cadastro.potencia"
-                                type="number" 
+                                ui-number-mask
+                                type="text" 
                                 class="form-control" 
-                                id="corrente"
+                                name="corrente"
                                 ng-disabled="true">
                     </div>
                 </div>
@@ -41,9 +42,10 @@
                         <div class="input-group-text">Ah</div>
                         </div>
                         <input ng-model="vm.cadastro.corrente"
-                                type="number" 
+                                ui-number-mask
+                                type="text" 
                                 class="form-control" 
-                                id="corrente"
+                                name="corrente"
                                 ng-disabled="true">
                     </div>
                 </div>

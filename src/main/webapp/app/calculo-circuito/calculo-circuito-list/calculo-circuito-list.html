@@ -46,8 +46,8 @@
                      <tr ng-repeat="item in vm.lista.registros">
                         <td class="text-center">{{$index +1}}</td>
                         <td>{{item.descricao}}</td>
-                        <td class="text-center">{{item.potencia}}</td>
-                        <td class="text-center">{{item.corrente}}</td>
+                        <td class="text-center">{{item.potencia | number:2}}</td>
+                        <td class="text-center">{{item.corrente | number:2}}</td>
                         <td class="text-right">
                             <button ui-sref="calculoCircuitoEditar({id: item.id})" class="btn btn-outline-secondary py-0">
                                 <span class="fa fa-pencil"></span>

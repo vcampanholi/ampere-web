@@ -47,9 +47,9 @@
                      <tr ng-repeat="item in vm.lista.registros">
                         <td class="text-center">{{$index +1}}</td>
                         <td>{{item.aparelho.descricao}}</td>
-                        <td class="text-center">{{item.corrente}}</td>
-                        <td class="text-center">{{item.protecao}}</td>
-                        <td class="text-center">{{item.diametroCondutor}}</td>
+                        <td class="text-center">{{item.corrente | number:2}}</td>
+                        <td class="text-center">{{item.protecao | number:2}}</td>
+                        <td class="text-center">{{item.diametroCondutor | number:2}}</td>
                         <td class="text-right">
                             <button ui-sref="calculoCargaEditar({id: item.id})" class="btn btn-outline-secondary py-0">
                                 <span class="fa fa-pencil"></span>

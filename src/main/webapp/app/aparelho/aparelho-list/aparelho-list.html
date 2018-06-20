@@ -45,7 +45,7 @@
                      <tr ng-repeat="aparelho in vm.lista.registros">
                         <td class="text-center">{{$index +1}}</td>
                         <td>{{aparelho.descricao}}</td>
-                        <td class="text-center">{{aparelho.potencia}}</td>
+                        <td class="text-center">{{aparelho.potencia | number:2}}</td>
                         <td class="text-center">{{aparelho.tensao}}</td>
                         <td class="text-right">
                             <button ui-sref="aparelhoEditar({id: aparelho.id})" class="btn btn-outline-secondary py-0">

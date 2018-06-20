@@ -48,7 +48,7 @@
                         <td>{{condutor.descricao}}</td>
                         <td class="text-right">{{condutor.tipo}}</td>
                         <td class="text-right">{{condutor.cor}}</td>
-                        <td class="text-center">{{condutor.espessura}}</td>
+                        <td class="text-center">{{condutor.espessura | number:2}}</td>
                         <td class="text-right">
                            <button ui-sref="condutorEditar({id: condutor.id})" 
                                    class="btn btn-outline-secondary py-0">

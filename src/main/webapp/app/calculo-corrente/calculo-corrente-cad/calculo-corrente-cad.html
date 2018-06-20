@@ -32,9 +32,10 @@
                         <div class="input-group-text">W</div>
                       </div>
                       <input ng-model="vm.cadastro.aparelho.potencia"
-                              type="number" 
+                              ui-number-mask
+                              type="text" 
                               class="form-control" 
-                              id="potencia"
+                              name="potencia"
                               ng-disabled="true">
                     </div>
                 </div>
@@ -45,9 +46,10 @@
                         <div class="input-group-text">V</div>
                       </div>
                       <input ng-model="vm.cadastro.aparelho.tensao"
-                              type="number" 
+                              ui-number-mask
+                              type="text" 
                               class="form-control" 
-                              id="tensao"
+                              name="tensao"
                               ng-disabled="true">
                     </div>
                 </div>
@@ -60,17 +62,19 @@
                         <div class="input-group-text">mts</div>
                       </div>
                       <input ng-model="vm.cadastro.distancia"
-                              type="number" 
+                              ui-number-mask
+                              type="text" 
                               class="form-control" 
-                              id="distancia">
+                              name="distancia">
                   </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="quedaTensao">Queda tensão</label>
                   <input ng-model="vm.cadastro.quedaTensao"
-                          type="number" 
+                          ui-number-mask
+                          type="text" 
                           class="form-control" 
-                          id="quedaTensao">
+                          name="quedaTensao">
                 </div>                
             </div>
             <div class="form-row">
@@ -81,9 +85,10 @@
                           <div class="input-group-text">Ah</div>
                         </div>
                         <input ng-model="vm.cadastro.corrente"
-                                type="number" 
+                                ui-number-mask
+                                type="text" 
                                 class="form-control" 
-                                id="corrente"
+                                name="corrente"
                                 ng-disabled="true"
                                 ng-class="{'is-invalid' : vm.error.corrente && !vm.cadastro.corrente}">
                               <small ng-if="vm.error.corrente && !vm.cadastro.corrente" class="invalid-feedback">

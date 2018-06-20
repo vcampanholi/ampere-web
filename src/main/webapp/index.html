@@ -11,7 +11,18 @@
    </head>
    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #7fa8eeb0;">
+
          <a class="navbar-brand">AmpereWeb</a>
+        <button class="navbar-toggler navbar-toggler-right" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarResponsive" 
+                aria-controls="navbarResponsive" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         <!--
          <button class="navbar-toggler navbar-toggler-right" 
             type="button"
             data-toggle="collapse" 
@@ -20,7 +31,7 @@
             aria-expanded="false" 
             aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
-         </button>
+         </button> -->
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Usuários">
@@ -214,9 +225,11 @@
          <script src="js/sb-admin.min.js"></script>
          <script src="js/angular.js"></script>
          <script src="js/angular-locale_pt-br.js"></script>
+         <script src="js/angular-input-masks-standalone.min.js"></script>
          <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
          <script src="https://unpkg.com/sweetalert2@7.20.1/dist/sweetalert2.all.js"></script>
          <!-- Scripts da Aplicação -->
+         
          <script src="app/module.js"></script>
          <script src="app/dialog.builder.service.js"></script>
 

@@ -32,9 +32,10 @@
                   <div class="input-group-text">Ah</div>
                 </div>
                   <input ng-model="vm.cadastro.corrente"
-                          type="number" 
+                          ui-number-mask
+                          type="text" 
                           class="form-control" 
-                          id="corrente"
+                          name="corrente"
                           ng-disabled="true"
                           ng-class="{'is-invalid' : vm.error.corrente && !vm.cadastro.corrente}">
                           <small ng-if="vm.error.corrente && !vm.cadastro.corrente" class="invalid-feedback">
@@ -49,9 +50,10 @@
                     <div class="input-group-text">Ah</div>
                   </div>
                   <input ng-model="vm.cadastro.protecao"
-                          type="number" 
+                          ui-number-mask
+                          type="text" 
                           class="form-control" 
-                          id="protecao"
+                          name="protecao"
                           ng-disabled="true"
                           ng-class="{'is-invalid' : vm.error.protecao && !vm.cadastro.protecao}">
                           <small ng-if="vm.error.protecao && !vm.cadastro.protecao" class="invalid-feedback">
@@ -66,9 +68,10 @@
                       <div class="input-group-text">mm</div>
                     </div>
                     <input ng-model="vm.cadastro.diametroCondutor"
-                            type="number" 
+                            ui-number-mask
+                            type="text" 
                             class="form-control" 
-                            id="diametroCondutor"
+                            name="diametroCondutor"
                             ng-disabled="true"
                             ng-class="{'is-invalid' : vm.error.diametroCondutor && !vm.cadastro.diametroCondutor}">
                           <small ng-if="vm.error.diametroCondutor && !vm.cadastro.diametroCondutor" class="invalid-feedback">

@@ -25,7 +25,10 @@
                 <div class="form-group col-md-3">
                   <label for="tipo">Tipo de Usuário</label>
                   <div class="padding" ng-cloak></div>
-                    <select ng-model="vm.cadastro.tipo" selected-text="getSelectedText()" class="form-control" >
+                    <select ng-model="vm.cadastro.tipo" 
+                            selected-text="getSelectedText()" 
+                            class="form-control"
+                            ng-class="{'is-invalid' : vm.error.tipo && !vm.cadastro.tipo}">
                         <option value="ELETRICISTA">Eletricista</option>
                         <option value="TECNICO">Técnico</option>
                         <option value="ENGENHEIRO">Engenheiro</option>
@@ -42,14 +45,14 @@
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="telefone">Telefone</label>
-                
                   <input ng-model="vm.cadastro.telefone"
                           ng-class="{'is-invalid' : vm.error.telefone && !vm.cadastro.telefone}"
                           type="text"
                           class="form-control"
                           placeholder="(00) 0000-0000"
-                          maxlength="11"
-                          id="telefone">
+                          name="telefone"
+                         
+                          ui-br-phone-number>
                           <small ng-if="vm.error.telefone && !vm.cadastro.telefone" class="invalid-feedback">
                               {{vm.error.telefone[1]}}
                           </small>
