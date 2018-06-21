@@ -11,35 +11,38 @@
         </div>
         <form>
             <div class="form-group">
-                <label for="nome">Descrição</label>
+                <label for="nome" class="required">Descrição</label>
                 <input ng-model="vm.cadastro.descricao"
                        ng-class="{'is-invalid': vm.error.descricao && !vm.cadastro.descricao}"  
                        type="text" 
                        class="form-control" 
-                       id="descricao">
+                       id="descricao"
+                       required>
                 <small ng-if="vm.error.descricao && !vm.cadastro.descricao" class="invalid-feedback">
                     {{vm.error.descricao[1]}}
                 </small>
              </div>
              <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="tipo">Tipo</label>
+                   <label for="tipo" class="required">Tipo</label>
                    <input ng-model="vm.cadastro.tipo"
                           ng-class="{'is-invalid': vm.error.tipo && !vm.cadastro.tipo}"  
                           type="text" 
                           class="form-control" 
-                          id="tipo">
+                          id="tipo"
+                          required>
                    <small ng-if="vm.error.tipo && !vm.cadastro.tipo" class="invalid-feedback">
                       {{vm.error.tipo[1]}}
                    </small>
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="cor">Cor</label>
+                   <label for="cor" class="required">Cor</label>
                    <input ng-model="vm.cadastro.cor"
                           ng-class="{'is-invalid': vm.error.cor && !vm.cadastro.cor}" 
                           type="text" 
                           class="form-control" 
-                          id="cor">
+                          id="cor"
+                          required>
                    <small ng-if="vm.error.cor && !vm.cadastro.cor" class="invalid-feedback">
                       {{vm.error.cor[1]}}
                    </small>
@@ -47,7 +50,7 @@
              </div>
              <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="cor">Espessura</label>
+                    <label for="espessura" class="required">Espessura</label>
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                           <div class="input-group-text">mm</div>
@@ -57,7 +60,8 @@
                                 ng-class="{'is-invalid': vm.error.espessura && !vm.cadastro.espessura}"  
                                 type="text`" 
                                 class="form-control" 
-                                name="espessura">
+                                name="espessura"
+                                required>
                               <small ng-if="vm.error.espessura && !vm.cadastro.espessura" class="invalid-feedback">
                                     {{vm.error.espessura[1]}}
                               </small>

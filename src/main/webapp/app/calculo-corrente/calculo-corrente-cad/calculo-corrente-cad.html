@@ -11,7 +11,7 @@
         </div>
         <form>
             <div class="form-group">
-                <label for="descricao">Aparelho</label>
+                <label for="descricao" class="required">Aparelho</label>
                 <select 
                     ng-class="{'is-invalid': vm.error.aparelho && !vm.cadastro.aparelho}" 
                     ng-options="item as item.descricao for item in vm.aparelhos track by item.id"            
@@ -79,7 +79,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="corrente">Corrente Máxima</label>
+                    <label for="corrente" class="required">Corrente Máxima</label>
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                           <div class="input-group-text">Ah</div>

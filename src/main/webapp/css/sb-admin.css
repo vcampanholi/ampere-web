@@ -503,3 +503,12 @@ footer.sticky-footer {
   background-color: #bbc1c5fa;
   border-color: #bbc1c5fa;
 }
+
+.required:after {
+  content:" *"; 
+  color: red;
+}
+
+input:required:invalid {
+  border-color: red;
+}

@@ -11,19 +11,20 @@
         </div>
         <form>
             <div class="form-group">
-              <label for="nome">Descrição</label>
+              <label for="nome" class="required">Descrição</label>
               <input ng-model="vm.cadastro.descricao"
                       ng-class="{'is-invalid' : vm.error.descricao && !vm.cadastro.descricao}"
                       type="text" 
                       class="form-control" 
-                      id="descricao">
+                      id="descricao"
+                      required>
                       <small ng-if="vm.error.descricao && !vm.cadastro.descricao" class="invalid-feedback">
                           {{vm.error.descricao[1]}}
                       </small>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="potencia">Potência</label>
+                <label for="potencia" class="required">Potência</label>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                       <div class="input-group-text">W</div>
@@ -33,7 +34,8 @@
                         type="text" 
                         class="form-control" 
                         name="potencia"
-                        ui-number-mask>
+                        ui-number-mask
+                        required>
                         <small ng-if="vm.error.potencia && !vm.cadastro.potencia" class="invalid-feedback">
                             {{vm.error.potencia[1]}}
                           </small>

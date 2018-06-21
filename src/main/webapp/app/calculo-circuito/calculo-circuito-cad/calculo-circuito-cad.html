@@ -9,12 +9,12 @@
         </div>
         <form>
             <div class="form-group">
-                <label for="aparelho">Descrição</label>
+                <label for="aparelho" class="required">Descrição</label>
                 <input ng-model="vm.cadastro.descricao"
                         ng-class="{'is-invalid' : vm.error.descricao && !vm.cadastro.descricao}"
                         type="text" 
                         class="form-control" 
-                        id="descricao">
+                        required>
                         <small ng-if="vm.error.descricao && !vm.cadastro.descricao" class="invalid-feedback">
                             {{vm.error.descricao[1]}}
                         </small>
@@ -95,7 +95,8 @@
         </div>
         <div class="form-row justify-content-end">
             <button ng-click="vm.salvar()" 
-                    type="button" 
+                    type="button"
+                    ng-disabled="vm.cadastro.itens.length <= 0" 
                     class="btn btn-outline-success mr-2">Salvar
             </button>
             <a ui-sref="calculoCircuitoList" 
@@ -115,9 +116,11 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="aparelho">Aparelho</label>
+                            <label for="aparelho" class="required">Aparelho</label>
                             <select ng-options="item as item.descricao for item in vm.aparelhos track by item.id"
-                                    ng-model="vm.itemLista.aparelho" class="form-control">
+                                    ng-model="vm.itemLista.aparelho" 
+                                    class="form-control"
+                                    required>
                             </select>
                         </div>
                     </div>
